@@ -1,0 +1,165 @@
+{
+    "Metadata": {
+        "siteName": "ARNOVA",
+        "titleTemplate": "%s — ARNOVA",
+        "home": {
+            "title": "ARNOVA — Marketing digital et édition de sites web",
+            "description": "ARNOVA conçoit, développe et exploite ses propres sites web. Marketing digital, référencement naturel et monétisation d’audiences."
+        },
+        "contact": {
+            "title": "Nous contacter",
+            "description": "Une question, un partenariat, un site à céder ? Écrivez à l’équipe ARNOVA."
+        },
+        "legal": {
+            "title": "Mentions légales",
+            "description": "Mentions légales du site arnova.fr : éditeur, hébergeur, propriété intellectuelle et données personnelles."
+        }
+    },
+    "Nav": {
+        "home": "Accueil",
+        "contact": "Contact",
+        "legal": "Mentions légales",
+        "languageSwitcher": "Changer de langue"
+    },
+    "Home": {
+        "hero": {
+            "eyebrow": "Marketing digital · Éditeur de sites",
+            "title": "Nous construisons des audiences qui durent.",
+            "lead": "ARNOVA conçoit, développe et exploite ses propres sites web. Nous réunissons l’édition de contenu, le référencement naturel et la monétisation pour transformer une audience en actif durable.",
+            "ctaPrimary": "Nous contacter",
+            "ctaSecondary": "Notre approche"
+        },
+        "services": {
+            "title": "Ce que nous faisons",
+            "lead": "Trois métiers, une même logique : faire croître des sites que nous gérons comme des actifs de long terme.",
+            "marketing": {
+                "title": "Marketing digital",
+                "body": "Acquisition, référencement naturel, analyse d’audience : nous pilotons la croissance de bout en bout, du mot-clé jusqu’à la conversion."
+            },
+            "publishing": {
+                "title": "Édition de sites",
+                "body": "Nous sommes propriétaires et éditeurs de nos propres sites. Chaque projet est mené comme une marque : ligne éditoriale, identité, qualité de lecture."
+            },
+            "monetization": {
+                "title": "Monétisation",
+                "body": "Affiliation, publicité, partenariats : nous construisons des modèles de revenus lisibles et adaptés à chaque audience."
+            }
+        },
+        "approach": {
+            "title": "Notre approche",
+            "lead": "Trois principes qui guident nos arbitrages, de la ligne éditoriale à l’acquisition.",
+            "content": {
+                "title": "Le contenu avant le trafic",
+                "body": "Une page utile se défend seule, durablement. Nous écrivons pour des lecteurs, pas pour un algorithme."
+            },
+            "data": {
+                "title": "Décider sur des données",
+                "body": "Chaque arbitrage éditorial s’appuie sur des mesures : requêtes réelles, comportement de lecture, revenus par page."
+            },
+            "longTerm": {
+                "title": "Le temps long",
+                "body": "Nous développons nos sites pour les garder. Nos décisions se jugent sur des années, pas sur un trimestre."
+            }
+        },
+        "company": {
+            "title": "La société",
+            "lead": "ARNOVA est une société française, immatriculée et enregistrée comme éditeur de portails Internet.",
+            "formLabel": "Forme juridique",
+            "formValue": "SAS immatriculée au RCS de {city}",
+            "apeLabel": "Code APE",
+            "apeValue": "{code} — Portails Internet",
+            "locationLabel": "Siège social",
+            "locationValue": "{city}, France"
+        },
+        "cta": {
+            "title": "Un site, un projet, une idée ?",
+            "body": "Nous étudions les opportunités d’acquisition, de partenariat et de régie publicitaire. Écrivez-nous, nous répondons rapidement.",
+            "button": "Nous écrire"
+        }
+    },
+    "Contact": {
+        "title": "Nous contacter",
+        "lead": "Une question, une proposition de partenariat, un site à céder ? Écrivez-nous : le formulaire arrive directement dans notre boîte de réception.",
+        "fields": {
+            "name": "Nom",
+            "email": "Adresse e-mail",
+            "message": "Message"
+        },
+        "submit": "Envoyer le message",
+        "submitting": "Envoi en cours…",
+        "success": "Merci, votre message est bien parti. Nous revenons vers vous rapidement.",
+        "error": "L’envoi a échoué. Réessayez ou écrivez-nous directement à {email}.",
+        "emailSubject": "Nouveau message de {name} — arnova.fr",
+        "privacyNotice": "Les informations saisies servent uniquement à traiter votre demande. Elles sont transmises par notre prestataire d’envoi de formulaires et ne font l’objet d’aucune cession à des tiers.",
+        "unconfigured": "Le formulaire n’est pas encore configuré. En attendant, écrivez-nous directement :",
+        "errors": {
+            "required": "Ce champ est obligatoire.",
+            "invalidEmail": "Cette adresse e-mail semble incorrecte.",
+            "tooShort": "Merci de détailler un peu votre demande."
+        },
+        "aside": {
+            "title": "Coordonnées",
+            "emailLabel": "E-mail",
+            "addressLabel": "Siège social",
+            "responseLabel": "Délai de réponse",
+            "responseValue": "Sous 48 heures ouvrées en général."
+        }
+    },
+    "Legal": {
+        "title": "Mentions légales",
+        "lead": "Informations légales relatives au site arnova.fr, conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
+        "updatedOn": "Dernière mise à jour : {date}",
+        "editor": {
+            "title": "Éditeur du site",
+            "nameLabel": "Dénomination sociale",
+            "formLabel": "Forme juridique",
+            "formValue": "Société par actions simplifiée (SAS)",
+            "capitalLabel": "Capital social",
+            "addressLabel": "Siège social",
+            "rcsLabel": "Immatriculation",
+            "rcsValue": "RCS {city} {siren}",
+            "siretLabel": "SIRET (siège)",
+            "vatLabel": "TVA intracommunautaire",
+            "apeLabel": "Code APE",
+            "apeValue": "{code} — Portails Internet",
+            "emailLabel": "Contact"
+        },
+        "director": {
+            "title": "Directeur de la publication",
+            "body": "{name}, en qualité de président de la société {company}."
+        },
+        "host": {
+            "title": "Hébergeur",
+            "body": "Le site est hébergé par {name}, {address}, {country}. Site web : {url}."
+        },
+        "intellectualProperty": {
+            "title": "Propriété intellectuelle",
+            "body": "L’ensemble des éléments composant ce site — textes, images, logos, marques, structure et code — est protégé par le droit d’auteur et le droit des marques. Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans autorisation écrite préalable de {company}, est interdite."
+        },
+        "personalData": {
+            "title": "Données personnelles",
+            "body": "Les seules données personnelles collectées sur ce site sont celles que vous transmettez volontairement via le formulaire de contact : nom, adresse e-mail et contenu du message. Elles sont traitées dans le seul but de répondre à votre demande, sur la base de votre consentement, et ne sont jamais cédées ni revendues à des tiers.",
+            "processor": "L’acheminement des messages est assuré par notre prestataire technique d’envoi de formulaires, qui agit en qualité de sous-traitant et ne conserve pas le contenu des messages au-delà de leur transmission.",
+            "retention": "Les échanges sont conservés le temps nécessaire au traitement de votre demande, puis archivés ou supprimés.",
+            "rights": "Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation et d’opposition sur vos données. Pour l’exercer, écrivez à {email}. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "Ce site ne dépose aucun cookie publicitaire ni traceur de mesure d’audience. Seuls les cookies strictement nécessaires à son fonctionnement — notamment la mémorisation de la langue choisie — peuvent être utilisés ; ils sont exemptés de consentement préalable."
+        },
+        "liability": {
+            "title": "Responsabilité",
+            "body": "{company} s’efforce d’assurer l’exactitude et la mise à jour des informations publiées sur ce site, sans pouvoir en garantir l’exhaustivité. Le site peut contenir des liens vers des sites tiers dont le contenu n’engage pas la responsabilité de {company}."
+        }
+    },
+    "NotFound": {
+        "title": "Page introuvable",
+        "body": "La page que vous cherchez n’existe pas ou a été déplacée.",
+        "cta": "Retour à l’accueil"
+    },
+    "Footer": {
+        "tagline": "Société d’édition de sites web et de marketing digital. Nous construisons, développons et exploitons nos propres audiences.",
+        "navLabel": "Navigation de bas de page",
+        "rights": "Tous droits réservés."
+    }
+}

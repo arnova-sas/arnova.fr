@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+:root {
+    --background: #ffffff;
+    --surface: #f5f6fa;
+    --surface-invert: #0b1020;
+    --foreground: #0b1020;
+    --foreground-invert: #f2f4fa;
+    --muted: #59627a;
+    --muted-invert: #a3adc4;
+    --border: #e3e7f0;
+    --border-invert: #212b41;
+    --accent: #4338ca;
+    --accent-hover: #3730a3;
+    --accent-soft: #eef0ff;
+    --accent-foreground: #ffffff;
+    --highlight: #d97706;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #070b16;
+        --surface: #0e1424;
+        --surface-invert: #0e1424;
+        --foreground: #e9edf7;
+        --foreground-invert: #e9edf7;
+        --muted: #98a2b8;
+        --muted-invert: #98a2b8;
+        --border: #1c2539;
+        --border-invert: #1c2539;
+        --accent: #818cf8;
+        --accent-hover: #a5b4fc;
+        --accent-soft: #141b2e;
+        --accent-foreground: #0b1020;
+        --highlight: #fbbf24;
+    }
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-surface: var(--surface);
+    --color-surface-invert: var(--surface-invert);
+    --color-foreground: var(--foreground);
+    --color-foreground-invert: var(--foreground-invert);
+    --color-muted: var(--muted);
+    --color-muted-invert: var(--muted-invert);
+    --color-border: var(--border);
+    --color-border-invert: var(--border-invert);
+    --color-accent: var(--accent);
+    --color-accent-hover: var(--accent-hover);
+    --color-accent-soft: var(--accent-soft);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-highlight: var(--highlight);
+
+    --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+        background-color: var(--accent);
+        color: var(--accent-foreground);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "Metadata": {
+        "siteName": "ARNOVA",
+        "titleTemplate": "%s — ARNOVA",
+        "home": {
+            "title": "ARNOVA — Digital marketing and web publishing",
+            "description": "ARNOVA designs, grows and operates its own websites. Digital marketing, search optimisation and audience monetisation."
+        },
+        "contact": {
+            "title": "Contact us",
+            "description": "A question, a partnership, a website to sell? Get in touch with the ARNOVA team."
+        },
+        "legal": {
+            "title": "Legal notice",
+            "description": "Legal notice for arnova.fr: publisher, hosting provider, intellectual property and personal data."
+        }
+    },
+    "Nav": {
+        "home": "Home",
+        "contact": "Contact",
+        "legal": "Legal notice",
+        "languageSwitcher": "Change language"
+    },
+    "Home": {
+        "hero": {
+            "eyebrow": "Digital marketing · Web publisher",
+            "title": "We build audiences that last.",
+            "lead": "ARNOVA designs, grows and operates its own websites. We combine editorial craft, search optimisation and monetisation to turn an audience into a durable asset.",
+            "ctaPrimary": "Contact us",
+            "ctaSecondary": "Our approach"
+        },
+        "services": {
+            "title": "What we do",
+            "lead": "Three disciplines, one logic: growing websites we run as long-term assets.",
+            "marketing": {
+                "title": "Digital marketing",
+                "body": "Acquisition, organic search, audience analytics: we drive growth end to end, from the keyword to the conversion."
+            },
+            "publishing": {
+                "title": "Web publishing",
+                "body": "We own and edit our own websites. Every project is run like a brand: editorial line, identity, reading quality."
+            },
+            "monetization": {
+                "title": "Monetisation",
+                "body": "Affiliate, advertising, partnerships: we build revenue models that are legible and matched to each audience."
+            }
+        },
+        "approach": {
+            "title": "Our approach",
+            "lead": "Three principles that guide our calls, from the editorial line to acquisition.",
+            "content": {
+                "title": "Content before traffic",
+                "body": "A genuinely useful page defends itself, and keeps doing so. We write for readers, not for an algorithm."
+            },
+            "data": {
+                "title": "Decide on evidence",
+                "body": "Every editorial call rests on measurement: real queries, reading behaviour, revenue per page."
+            },
+            "longTerm": {
+                "title": "The long game",
+                "body": "We grow our websites to keep them. Our decisions are judged over years, not over a quarter."
+            }
+        },
+        "company": {
+            "title": "The company",
+            "lead": "ARNOVA is a French company, incorporated and registered as a web portal publisher.",
+            "formLabel": "Legal form",
+            "formValue": "SAS registered with the {city} Trade and Companies Register",
+            "apeLabel": "Industry code",
+            "apeValue": "{code} — Web portals",
+            "locationLabel": "Registered office",
+            "locationValue": "{city}, France"
+        },
+        "cta": {
+            "title": "A website, a project, an idea?",
+            "body": "We look at acquisition, partnership and ad-sales opportunities. Write to us — we answer quickly.",
+            "button": "Get in touch"
+        }
+    },
+    "Contact": {
+        "title": "Contact us",
+        "lead": "A question, a partnership proposal, a website to sell? Write to us: the form lands straight in our inbox.",
+        "fields": {
+            "name": "Name",
+            "email": "Email address",
+            "message": "Message"
+        },
+        "submit": "Send message",
+        "submitting": "Sending…",
+        "success": "Thanks, your message is on its way. We will get back to you shortly.",
+        "error": "Sending failed. Please try again, or write to us directly at {email}.",
+        "emailSubject": "New message from {name} — arnova.fr",
+        "privacyNotice": "The details you enter are used solely to handle your request. They are delivered through our form-sending provider and are never sold or shared with third parties.",
+        "unconfigured": "The form is not configured yet. In the meantime, write to us directly:",
+        "errors": {
+            "required": "This field is required.",
+            "invalidEmail": "This email address looks incorrect.",
+            "tooShort": "Please tell us a little more about your request."
+        },
+        "aside": {
+            "title": "Details",
+            "emailLabel": "Email",
+            "addressLabel": "Registered office",
+            "responseLabel": "Response time",
+            "responseValue": "Usually within 48 working hours."
+        }
+    },
+    "Legal": {
+        "title": "Legal notice",
+        "lead": "Legal information about arnova.fr, published in accordance with French Act No. 2004-575 of 21 June 2004 on confidence in the digital economy.",
+        "updatedOn": "Last updated: {date}",
+        "editor": {
+            "title": "Site publisher",
+            "nameLabel": "Company name",
+            "formLabel": "Legal form",
+            "formValue": "Simplified joint-stock company (SAS)",
+            "capitalLabel": "Share capital",
+            "addressLabel": "Registered office",
+            "rcsLabel": "Registration",
+            "rcsValue": "{city} Trade and Companies Register — {siren}",
+            "siretLabel": "SIRET (head office)",
+            "vatLabel": "Intra-community VAT",
+            "apeLabel": "Industry code",
+            "apeValue": "{code} — Web portals",
+            "emailLabel": "Contact"
+        },
+        "director": {
+            "title": "Publication director",
+            "body": "{name}, in his capacity as president of {company}."
+        },
+        "host": {
+            "title": "Hosting provider",
+            "body": "This site is hosted by {name}, {address}, {country}. Website: {url}."
+        },
+        "intellectualProperty": {
+            "title": "Intellectual property",
+            "body": "Every element making up this site — text, images, logos, trade marks, structure and code — is protected by copyright and trade mark law. Any reproduction, representation, adaptation or exploitation, in whole or in part, without the prior written consent of {company}, is prohibited."
+        },
+        "personalData": {
+            "title": "Personal data",
+            "body": "The only personal data collected on this site is what you voluntarily submit through the contact form: name, email address and message content. It is processed for the sole purpose of answering your request, on the basis of your consent, and is never sold or shared with third parties.",
+            "processor": "Message delivery is handled by our form-sending provider, acting as a processor, which does not retain message content beyond its transmission.",
+            "retention": "Exchanges are kept for as long as needed to handle your request, then archived or deleted.",
+            "rights": "Under the General Data Protection Regulation (GDPR) and the French Data Protection Act, you have the right to access, rectify, erase, restrict and object to the processing of your data. To exercise those rights, write to {email}. You may also lodge a complaint with the CNIL, the French data protection authority (www.cnil.fr)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "This site sets no advertising cookies and no analytics trackers. Only cookies strictly necessary for it to work — notably remembering your chosen language — may be used; these are exempt from prior consent."
+        },
+        "liability": {
+            "title": "Liability",
+            "body": "{company} strives to keep the information published on this site accurate and up to date, without being able to guarantee that it is exhaustive. The site may link to third-party sites whose content is not the responsibility of {company}."
+        }
+    },
+    "NotFound": {
+        "title": "Page not found",
+        "body": "The page you are looking for does not exist or has been moved.",
+        "cta": "Back to home"
+    },
+    "Footer": {
+        "tagline": "A web publishing and digital marketing company. We build, grow and operate our own audiences.",
+        "navLabel": "Footer navigation",
+        "rights": "All rights reserved."
+    }
+}
