@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'website',
             locale,
         },
+        // `opengraph-image.png` / `twitter-image.png` in `src/app/` are picked up by
+        // the file convention; this only declares how X should frame them.
+        twitter: { card: 'summary_large_image' },
         robots: { index: true, follow: true },
     }
 }

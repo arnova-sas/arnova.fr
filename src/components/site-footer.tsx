@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import { company, formattedAddress } from '@/config/company'
 import { Link } from '@/i18n/navigation'
 import { Container } from './container'
+import { LogoMark } from './logo'
 
 export function SiteFooter() {
     const t = useTranslations('Footer')
@@ -12,7 +13,10 @@ export function SiteFooter() {
             <Container className="flex flex-col gap-10 py-14">
                 <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
                     <div className="max-w-sm">
-                        <p className="font-display text-lg font-bold tracking-[0.18em] text-foreground">ARNOVA</p>
+                        <div className="flex items-center gap-2.5">
+                            <LogoMark className="h-8 w-8" />
+                            <p className="font-display text-lg font-bold tracking-[0.18em] text-foreground">ARNOVA</p>
+                        </div>
                         <p className="mt-3 text-sm leading-relaxed text-muted">{t('tagline')}</p>
                     </div>
 

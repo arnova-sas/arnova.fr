@@ -46,3 +46,15 @@ Posts directly to Web3Forms from the browser — there is no API route and no se
 secret. `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` is public by design. Validation rules live in
 `src/lib/contact-form.ts` and return error _codes_ resolved against `Contact.errors.*`;
 keep them locale-agnostic.
+
+## Brand and colour
+
+`src/app/globals.css` is the only place colours are defined, as CSS custom properties
+consumed through Tailwind's `@theme inline`. Never hard-code a hex value in a component.
+
+The palette derives from the logo mark's teal (`#235964`). If the logo changes,
+regenerate the derived assets listed in `README.md` _and_ re-derive `--accent`.
+
+Every foreground/background pair must stay at WCAG AA (4.5:1) — `yarn check:contrast`
+reads the tokens out of `globals.css` and fails CI otherwise. The dark-mode logo variant
+exists for the same reason; keep both tints in step.

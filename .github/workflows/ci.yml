@@ -30,5 +30,8 @@ jobs:
             - name: Check translation catalogue parity
               run: node scripts/check-messages.mjs
 
+            - name: Check colour contrast (WCAG AA)
+              run: node scripts/check-contrast.mjs
+
             - name: Build
               run: yarn build

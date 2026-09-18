@@ -11,7 +11,9 @@
         "typecheck": "tsc --noEmit",
         "prettier": "prettier --write \"**/*.{css,md,yaml,yml}\"",
         "prettier:check": "prettier --check \"**/*.{css,md,yaml,yml}\"",
-        "lint-ci": "yarn lint && yarn typecheck",
+        "check:messages": "node scripts/check-messages.mjs",
+        "check:contrast": "node scripts/check-contrast.mjs",
+        "lint-ci": "yarn lint && yarn typecheck && yarn check:messages && yarn check:contrast",
         "prepare": "husky"
     },
     "dependencies": {

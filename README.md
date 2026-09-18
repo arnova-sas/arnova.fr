@@ -108,3 +108,30 @@ Hosted on Vercel. Import the repository, then:
 
 `vercel.json` pins the build to the `cdg1` (Paris) region and uses a frozen-lockfile
 install. No other configuration is needed — the framework is auto-detected.
+
+## Brand assets
+
+The logo is the source of the palette, not the other way round: `--accent` is the
+mark's own teal (`#235964`).
+
+| File                          | Purpose                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------ |
+| `public/logo.png`             | Master artwork as supplied — 512×512, white background                   |
+| `public/logo-mark.png`        | Transparent mark in brand teal, for light backgrounds                    |
+| `public/logo-mark-dark.png`   | Same mark tinted `#7fb9c6`, for dark backgrounds                         |
+| `src/app/icon.png`            | Favicon (white background — a transparent mark vanishes in light chrome) |
+| `src/app/apple-icon.png`      | iOS home-screen icon; iOS applies its own rounding                       |
+| `src/app/opengraph-image.png` | 1200×630 link-preview card                                               |
+| `src/app/twitter-image.png`   | Same card, declared separately for X                                     |
+
+Two tints exist because the brand teal falls to roughly 1.6:1 against the dark-mode
+background. `LogoMark` swaps them with Tailwind's `dark:` variant, which keys off
+`prefers-color-scheme` — the same signal `globals.css` uses, so they cannot disagree.
+
+`yarn check:contrast` parses the tokens straight out of `globals.css` and fails if any
+foreground/background pair drops below WCAG AA (4.5:1). It runs in CI, so a palette
+tweak that hurts legibility breaks the build rather than shipping.
+
+> The master is a raster PNG, so the emblem's finer details (the dashed arc, the network
+> nodes) go soft at the 36px header size on non-retina displays. An SVG master would fix
+> that permanently and shrink the assets — worth requesting if the logo source exists.
