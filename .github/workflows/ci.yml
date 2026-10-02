@@ -8,9 +8,15 @@ on:
 permissions:
     contents: read
 
+# Supersede outdated runs of a pull request; push runs (head_ref empty) are never cancelled.
+concurrency:
+    group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+    cancel-in-progress: true
+
 jobs:
     quality:
         runs-on: ubuntu-latest
+        timeout-minutes: 15
         steps:
             - uses: actions/checkout@v7
 
