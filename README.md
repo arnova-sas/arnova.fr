@@ -58,6 +58,7 @@ src/
   proxy.ts              locale negotiation (Next 16 renamed `middleware` -> `proxy`)
 scripts/
   check-messages.mjs    fails CI when fr/en catalogues drift apart
+  check-contrast.mjs    fails CI when a colour pair in globals.css drops below WCAG AA
 ```
 
 ## Internationalisation
@@ -70,7 +71,8 @@ scripts/
   `@/i18n/navigation` — never from `next/link` or `next/navigation` — so the prefix and
   the localised pathnames are applied.
 - Translation keys are type-checked against `messages/fr.json` (see `global.d.ts`), and
-  `yarn build` in CI runs `scripts/check-messages.mjs` to keep `en.json` in sync.
+  `yarn check:messages` (`scripts/check-messages.mjs`, a dedicated CI step) keeps
+  `en.json` in sync.
 - Messages are parsed as ICU MessageFormat: use typographic apostrophes (`’`), never
   straight ones (`'`), which ICU treats as an escape character.
 
@@ -94,17 +96,24 @@ yarn lint             # Biome check
 yarn lint:fix         # Biome check --write
 yarn typecheck        # tsc --noEmit
 yarn prettier         # format CSS / Markdown / YAML
-yarn lint-ci          # lint + typecheck
+yarn prettier:check   # verify CSS / Markdown / YAML formatting
+yarn check:messages   # fr/en message catalogue parity
+yarn check:contrast   # WCAG AA contrast of the globals.css palette
+yarn lint-ci          # lint + typecheck + check:messages + check:contrast
 ```
+
+CI (`.github/workflows/ci.yml`) runs lint, `prettier:check`, typecheck, the messages and
+contrast checks and `yarn build` as separate steps on every push to `main` and every pull
+request.
 
 ## Deployment
 
-Hosted on Vercel. Import the repository, then:
+Live at <https://arnova.fr>, hosted on Vercel through its Git integration: pushes to
+`main` deploy to production and pull requests get preview deployments. GitHub Actions
+only validates the code.
 
-1. Set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` in **Settings → Environment Variables**
-   (Production, Preview and Development).
-2. Add the `arnova.fr` domain and point the DNS records at Vercel.
-3. Pushes to `main` deploy to production; pull requests get preview deployments.
+`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` is set in the Vercel project (**Settings → Environment
+Variables**); since it is inlined at build time, redeploy after changing it.
 
 `vercel.json` pins the build to the `cdg1` (Paris) region and uses a frozen-lockfile
 install. No other configuration is needed — the framework is auto-detected.
