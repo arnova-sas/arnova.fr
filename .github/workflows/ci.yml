@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
     quality:
+        name: Quality
         runs-on: ubuntu-latest
         timeout-minutes: 15
         steps:
@@ -44,3 +45,14 @@ jobs:
 
             - name: Build
               run: yarn build
+
+    ci-passed:
+        name: CI passed
+        needs: [quality]
+        if: always()
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        steps:
+            - name: Check that all required jobs succeeded
+              if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+              run: exit 1
