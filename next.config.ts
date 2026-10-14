@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin()
 
 /**
  * Baseline security headers. Vercel adds HSTS on custom domains, so it is not
- * repeated here; everything below also applies to `yarn dev` and `yarn start`.
+ * repeated here; everything below also applies to `pnpm dev` and `pnpm start`.
  */
 const securityHeaders = [
     { key: 'X-Content-Type-Options', value: 'nosniff' },

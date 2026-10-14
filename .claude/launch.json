@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "arnova.fr",
-            "runtimeExecutable": "yarn",
+            "runtimeExecutable": "pnpm",
             "runtimeArgs": ["dev"],
             "port": 3000
         }
