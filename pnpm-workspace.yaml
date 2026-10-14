@@ -1,0 +1,6 @@
+# Dependencies allowed to run install scripts (pnpm blocks them by default)
+allowBuilds:
+    # Both come from next-intl and ship prebuilt binaries as optional dependencies;
+    # their install scripts are only fallbacks (build from source / WASM download)
+    '@parcel/watcher': false
+    '@swc/core': false

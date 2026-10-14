@@ -13,11 +13,13 @@ setup. The points below are the ones that are easy to get wrong.
 
 ## Conventions
 
-- **Package manager is yarn.** Never npm or pnpm.
+- **Package manager is pnpm.** Never npm or yarn. Its version is pinned by `packageManager` in
+  `package.json`, and `pnpm-workspace.yaml` lists the dependencies allowed to run install scripts
+  (`allowBuilds`; pnpm fails the install on a new unlisted one).
 - **Formatting is Biome**, not ESLint: 4-space indent, 120 columns, single quotes,
-  no semicolons, trailing commas `es5`. Run `yarn lint:fix` after editing.
+  no semicolons, trailing commas `es5`. Run `pnpm lint:fix` after editing.
   Prettier handles CSS / Markdown / YAML only.
-- `yarn watch` does not exist here; Tailwind v4 is compiled by Next itself.
+- `pnpm watch` does not exist here; Tailwind v4 is compiled by Next itself.
 
 ## i18n rules
 
@@ -55,6 +57,6 @@ consumed through Tailwind's `@theme inline`. Never hard-code a hex value in a co
 The palette derives from the logo mark's teal (`#235964`). If the logo changes,
 regenerate the derived assets listed in `README.md` _and_ re-derive `--accent`.
 
-Every foreground/background pair must stay at WCAG AA (4.5:1) — `yarn check:contrast`
+Every foreground/background pair must stay at WCAG AA (4.5:1) — `pnpm check:contrast`
 reads the tokens out of `globals.css` and fails CI otherwise. The dark-mode logo variant
 exists for the same reason; keep both tints in step.

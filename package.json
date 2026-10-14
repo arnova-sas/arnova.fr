@@ -13,7 +13,7 @@
         "prettier:check": "prettier --check \"**/*.{css,md,yaml,yml}\"",
         "check:messages": "node scripts/check-messages.mjs",
         "check:contrast": "node scripts/check-contrast.mjs",
-        "lint-ci": "yarn lint && yarn typecheck && yarn check:messages && yarn check:contrast",
+        "lint-ci": "pnpm lint && pnpm typecheck && pnpm check:messages && pnpm check:contrast",
         "prepare": "husky"
     },
     "dependencies": {
@@ -40,5 +40,5 @@
         "*.{js,jsx,ts,tsx,mjs,cjs,json}": "biome check --write --no-errors-on-unmatched",
         "*.{css,md,yaml,yml}": "prettier --write"
     },
-    "packageManager": "yarn@1.22.22"
+    "packageManager": "pnpm@12.11.2"
 }

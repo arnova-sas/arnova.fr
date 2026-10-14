@@ -21,9 +21,9 @@ legal notice.
 ## Getting started
 
 ```bash
-yarn install
+pnpm install
 cp .env.example .env.local   # then fill in the Web3Forms key
-yarn dev                     # http://localhost:3000
+pnpm dev                     # http://localhost:3000
 ```
 
 ## Environment variables
@@ -71,7 +71,7 @@ scripts/
   `@/i18n/navigation` — never from `next/link` or `next/navigation` — so the prefix and
   the localised pathnames are applied.
 - Translation keys are type-checked against `messages/fr.json` (see `global.d.ts`), and
-  `yarn check:messages` (`scripts/check-messages.mjs`, a dedicated CI step) keeps
+  `pnpm check:messages` (`scripts/check-messages.mjs`, a dedicated CI step) keeps
   `en.json` in sync.
 - Messages are parsed as ICU MessageFormat: use typographic apostrophes (`’`), never
   straight ones (`'`), which ICU treats as an escape character.
@@ -89,21 +89,21 @@ wording of the notice changes.
 ## Scripts
 
 ```bash
-yarn dev              # dev server
-yarn build            # production build
-yarn start            # serve the production build
-yarn lint             # Biome check
-yarn lint:fix         # Biome check --write
-yarn typecheck        # tsc --noEmit
-yarn prettier         # format CSS / Markdown / YAML
-yarn prettier:check   # verify CSS / Markdown / YAML formatting
-yarn check:messages   # fr/en message catalogue parity
-yarn check:contrast   # WCAG AA contrast of the globals.css palette
-yarn lint-ci          # lint + typecheck + check:messages + check:contrast
+pnpm dev              # dev server
+pnpm build            # production build
+pnpm start            # serve the production build
+pnpm lint             # Biome check
+pnpm lint:fix         # Biome check --write
+pnpm typecheck        # tsc --noEmit
+pnpm prettier         # format CSS / Markdown / YAML
+pnpm prettier:check   # verify CSS / Markdown / YAML formatting
+pnpm check:messages   # fr/en message catalogue parity
+pnpm check:contrast   # WCAG AA contrast of the globals.css palette
+pnpm lint-ci          # lint + typecheck + check:messages + check:contrast
 ```
 
 CI (`.github/workflows/ci.yml`) runs lint, `prettier:check`, typecheck, the messages and
-contrast checks and `yarn build` as separate steps on every push to `main` and every pull
+contrast checks and `pnpm build` as separate steps on every push to `main` and every pull
 request.
 
 ## Deployment
@@ -137,7 +137,7 @@ Two tints exist because the brand teal falls to roughly 1.6:1 against the dark-m
 background. `LogoMark` swaps them with Tailwind's `dark:` variant, which keys off
 `prefers-color-scheme` — the same signal `globals.css` uses, so they cannot disagree.
 
-`yarn check:contrast` parses the tokens straight out of `globals.css` and fails if any
+`pnpm check:contrast` parses the tokens straight out of `globals.css` and fails if any
 foreground/background pair drops below WCAG AA (4.5:1). It runs in CI, so a palette
 tweak that hurts legibility breaks the build rather than shipping.
 
