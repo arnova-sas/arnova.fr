@@ -171,16 +171,16 @@ importers:
         version: 2.1.1
       next:
         specifier: 16.4.0
-        version: 16.4.0(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 16.4.0(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-intl:
         specifier: ^4.14.5
-        version: 4.14.9(@swc/helpers@0.5.23)(@types/react@19.3.0)(next@16.4.0(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
+        version: 4.14.9(@swc/helpers@0.5.23)(@types/react@19.3.0)(next@16.4.0(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       react:
-        specifier: 19.3.0
-        version: 19.3.0
+        specifier: 19.3.1
+        version: 19.3.1
       react-dom:
-        specifier: 19.3.0
-        version: 19.3.0(react@19.3.0)
+        specifier: 19.3.1
+        version: 19.3.1(react@19.3.1)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.15
@@ -1208,13 +1208,13 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  react-dom@19.3.0:
-    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
+  react-dom@19.3.1:
+    resolution: {integrity: sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==}
     peerDependencies:
-      react: ^19.3.0
+      react: ^19.3.1
 
-  react@19.3.0:
-    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
+  react@19.3.1:
+    resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
     engines: {node: '>=0.10.0'}
 
   scheduler@0.28.0:
@@ -1889,7 +1889,7 @@ snapshots:
 
   next-intl-swc-plugin-extractor@4.14.9: {}
 
-  next-intl@4.14.9(@swc/helpers@0.5.23)(@types/react@19.3.0)(next@16.4.0(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0):
+  next-intl@4.14.9(@swc/helpers@0.5.23)(@types/react@19.3.0)(next@16.4.0(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1):
     dependencies:
       '@eloqnt/config': 0.1.1
       '@eloqnt/format-json': 0.1.0
@@ -1899,25 +1899,25 @@ snapshots:
       '@swc/core': 1.16.13(@swc/helpers@0.5.23)
       icu-minify: 4.14.9
       negotiator: 1.1.0
-      next: 16.4.0(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.4.0(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-intl-swc-plugin-extractor: 4.14.9
-      react: 19.3.0
-      use-intl: 4.14.9(@types/react@19.3.0)(react@19.3.0)
+      react: 19.3.1
+      use-intl: 4.14.9(@types/react@19.3.0)(react@19.3.1)
     optionalDependencies:
       '@types/react': 19.3.0
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  next@16.4.0(@types/node@24.19.2)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  next@16.4.0(@types/node@24.19.2)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@next/env': 16.4.0
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.11.25
       caniuse-lite: 1.0.30001810
       postcss: 8.5.23
-      react: 19.3.0
-      react-dom: 19.3.0(react@19.3.0)
-      styled-jsx: 5.1.6(react@19.3.0)
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+      styled-jsx: 5.1.6(react@19.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.4.0
       '@next/swc-darwin-x64': 16.4.0
@@ -1959,12 +1959,12 @@ snapshots:
 
   prettier@3.9.10: {}
 
-  react-dom@19.3.0(react@19.3.0):
+  react-dom@19.3.1(react@19.3.1):
     dependencies:
-      react: 19.3.0
+      react: 19.3.1
       scheduler: 0.28.0
 
-  react@19.3.0: {}
+  react@19.3.1: {}
 
   scheduler@0.28.0: {}
 
@@ -2009,10 +2009,10 @@ snapshots:
 
   string-argv@0.3.2: {}
 
-  styled-jsx@5.1.6(react@19.3.0):
+  styled-jsx@5.1.6(react@19.3.1):
     dependencies:
       client-only: 0.0.1
-      react: 19.3.0
+      react: 19.3.1
 
   tailwindcss@4.3.3: {}
 
@@ -2047,13 +2047,13 @@ snapshots:
 
   undici-types@7.24.6: {}
 
-  use-intl@4.14.9(@types/react@19.3.0)(react@19.3.0):
+  use-intl@4.14.9(@types/react@19.3.0)(react@19.3.1):
     dependencies:
       '@formatjs/fast-memoize': 3.1.7
       '@schummar/icu-type-parser': 1.21.5
       icu-minify: 4.14.9
       intl-messageformat: 11.2.15
-      react: 19.3.0
+      react: 19.3.1
     optionalDependencies:
       '@types/react': 19.3.0
 
