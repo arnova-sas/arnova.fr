@@ -31,7 +31,8 @@ export const company = {
         /** ISO 3166-1 alpha-2, for structured data. */
         countryCode: 'FR',
     },
-    email: 'arnova.gsainthillier@gmail.com',
+    /** Public address shown on the site. The contact form is delivered elsewhere (Web3Forms -> the Gmail inbox). */
+    email: 'contact@arnova.fr',
     publicationDirector: 'Guillaume Sainthillier',
     /** Required in French "mentions légales": identity of the hosting provider. */
     host: {
@@ -63,7 +64,7 @@ export const company = {
         url: 'https://web3forms.com',
         privacyUrl: 'https://web3forms.com/privacy',
     },
-    /** Hosts the inbox behind `email` (a Gmail address). */
+    /** Hosts the Gmail inbox Web3Forms delivers contact-form submissions to. */
     mailProvider: {
         name: 'Google',
         service: 'Gmail',
