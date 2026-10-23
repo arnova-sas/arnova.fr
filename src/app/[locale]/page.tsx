@@ -7,6 +7,7 @@ import { company } from '@/config/company'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { buildAlternates } from '@/lib/metadata'
+import { organizationJsonLd, serializeJsonLd } from '@/lib/structured-data'
 
 type PageProps = { params: Promise<{ locale: Locale }> }
 
@@ -28,6 +29,11 @@ export default async function HomePage({ params }: PageProps) {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD built from company.ts, `<` escaped
+                dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd()) }}
+            />
             <Hero />
             <Services />
             <Approach />
