@@ -17,6 +17,10 @@
         "privacy": {
             "title": "Privacy policy",
             "description": "How ARNOVA handles personal data collected on arnova.fr: contact form, hosting logs, recipients, retention periods and GDPR rights."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "description": "The only cookie arnova.fr sets remembers your display language. No audience measurement, no advertising, no third-party tracker."
         }
     },
     "Nav": {
@@ -24,7 +28,8 @@
         "contact": "Contact",
         "legal": "Legal notice",
         "languageSwitcher": "Change language",
-        "privacy": "Privacy"
+        "privacy": "Privacy",
+        "cookies": "Cookies"
     },
     "Home": {
         "hero": {
@@ -120,7 +125,8 @@
     },
     "LegalPages": {
         "notice": "Legal notice",
-        "privacy": "Privacy"
+        "privacy": "Privacy",
+        "cookies": "Cookies"
     },
     "Legal": {
         "title": "Legal notice",
@@ -156,8 +162,8 @@
             "body": "{company} strives to keep the information published on this site accurate and up to date, without being able to guarantee that it is exhaustive. The site may link to third-party sites whose content is not the responsibility of {company}."
         },
         "data": {
-            "title": "Personal data",
-            "body": "How personal data collected on this site is handled is described in the <privacy>privacy policy</privacy>."
+            "title": "Personal data and cookies",
+            "body": "How personal data collected on this site is handled is described in the <privacy>privacy policy</privacy>, and the only cookie it sets on the <cookies>Cookies page</cookies>."
         }
     },
     "Privacy": {
@@ -224,6 +230,46 @@
             "title": "Security and data breaches",
             "measures": "The site is served over HTTPS only, and the form is sent encrypted to the form-delivery service. Access to the inbox is restricted to ARNOVA.",
             "breach": "In the event of a personal data breach, {company} notifies the CNIL within 72 hours of becoming aware of it, unless it is unlikely to result in a risk to your rights (GDPR Article 33), and informs you directly if that risk is high (Article 34)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "The site sets a single technical cookie, which remembers your display language, and no audience-measurement or advertising tracker. The details are on the <link>Cookies page</link>."
+        }
+    },
+    "Cookies": {
+        "title": "Cookies",
+        "lead": "arnova.fr sets a single cookie, strictly necessary to show the site in your language. That is why no banner asks for your consent.",
+        "list": {
+            "title": "Cookie set",
+            "intro": "This is the complete list of cookies the site may set in your browser.",
+            "caption": "Cookies set by arnova.fr",
+            "columns": {
+                "name": "Name",
+                "party": "Set by",
+                "purpose": "Purpose",
+                "lifetime": "Lifetime",
+                "consent": "Consent"
+            },
+            "exemption": "This cookie is strictly necessary to provide the service you ask for, so it is exempt from prior consent under Article 82 of the French Data Protection Act and the CNIL guidelines."
+        },
+        "locale": {
+            "party": "First party (arnova.fr)",
+            "purpose": "Remembering your display language (French or English) so that the right version of each page is served on later visits.",
+            "lifetime": "Session: deleted when the browser closes",
+            "consent": "Exempt"
+        },
+        "none": {
+            "title": "No trackers",
+            "analytics": "No audience measurement: no Google Analytics or similar tool.",
+            "ads": "No advertising and no advertising cookies.",
+            "thirdParty": "No third-party trackers: no social media buttons, embedded videos or tracking pixels.",
+            "fonts": "Fonts are served by the site itself: your browser does not contact any third-party font service.",
+            "consequence": "The site therefore uses no cookie or tracker that would require your consent."
+        },
+        "manage": {
+            "title": "Managing cookies",
+            "body": "You can delete this cookie or block cookies at any time in your browser settings. The site remains fully usable: the language will simply be worked out again from the page address or your browser preferences.",
+            "privacy": "For the other data processed during your visit, including hosting logs, see the <link>privacy policy</link>."
         }
     },
     "NotFound": {

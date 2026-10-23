@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import { LegalFacts, LegalLayout, LegalList, legalLinkClass } from '@/components/legal/legal-layout'
 import { company, formattedAddress } from '@/config/company'
+import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { buildAlternates } from '@/lib/metadata'
 import { regionName } from '@/lib/region'
@@ -186,6 +187,21 @@ function PrivacyPolicy() {
                     id: 'reclamation',
                     title: t('complaint.title'),
                     content: <p>{t.rich('complaint.body', { link: external(CNIL_COMPLAINT_URL) })}</p>,
+                },
+                {
+                    id: 'cookies',
+                    title: t('cookies.title'),
+                    content: (
+                        <p>
+                            {t.rich('cookies.body', {
+                                link: (chunks) => (
+                                    <Link href="/cookies" className={legalLinkClass}>
+                                        {chunks}
+                                    </Link>
+                                ),
+                            })}
+                        </p>
+                    ),
                 },
                 {
                     id: 'securite',

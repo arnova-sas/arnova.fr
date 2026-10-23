@@ -25,6 +25,7 @@ export const routing = defineRouting({
             fr: '/confidentialite',
             en: '/privacy-policy',
         },
+        '/cookies': '/cookies',
     },
 })
 

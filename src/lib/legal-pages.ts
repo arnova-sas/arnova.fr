@@ -7,6 +7,7 @@ import type { AppPathname } from '@/i18n/routing'
 export const legalPages = [
     { key: 'notice', href: '/mentions-legales', updatedOn: '2026-10-23' },
     { key: 'privacy', href: '/confidentialite', updatedOn: '2026-10-23' },
+    { key: 'cookies', href: '/cookies', updatedOn: '2026-10-23' },
 ] as const satisfies {
     key: string
     href: AppPathname

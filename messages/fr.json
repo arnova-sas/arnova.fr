@@ -17,6 +17,10 @@
         "privacy": {
             "title": "Politique de confidentialité",
             "description": "Comment ARNOVA traite les données personnelles collectées sur arnova.fr : formulaire de contact, journaux d’hébergement, destinataires, durées de conservation et droits RGPD."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "description": "Le seul cookie déposé par arnova.fr mémorise la langue d’affichage. Aucune mesure d’audience, aucune publicité, aucun traceur tiers."
         }
     },
     "Nav": {
@@ -24,7 +28,8 @@
         "contact": "Contact",
         "legal": "Mentions légales",
         "languageSwitcher": "Changer de langue",
-        "privacy": "Confidentialité"
+        "privacy": "Confidentialité",
+        "cookies": "Cookies"
     },
     "Home": {
         "hero": {
@@ -120,7 +125,8 @@
     },
     "LegalPages": {
         "notice": "Mentions légales",
-        "privacy": "Confidentialité"
+        "privacy": "Confidentialité",
+        "cookies": "Cookies"
     },
     "Legal": {
         "title": "Mentions légales",
@@ -156,8 +162,8 @@
             "body": "{company} s’efforce d’assurer l’exactitude et la mise à jour des informations publiées sur ce site, sans pouvoir en garantir l’exhaustivité. Le site peut contenir des liens vers des sites tiers dont le contenu n’engage pas la responsabilité de {company}."
         },
         "data": {
-            "title": "Données personnelles",
-            "body": "Le traitement des données personnelles collectées sur ce site est décrit dans la <privacy>politique de confidentialité</privacy>."
+            "title": "Données personnelles et cookies",
+            "body": "Le traitement des données personnelles collectées sur ce site est décrit dans la <privacy>politique de confidentialité</privacy>, et le seul cookie qu’il dépose sur la <cookies>page Cookies</cookies>."
         }
     },
     "Privacy": {
@@ -224,6 +230,46 @@
             "title": "Sécurité et violations de données",
             "measures": "Le site est servi exclusivement en HTTPS, et le formulaire est transmis chiffré au service d’envoi de formulaires. L’accès à la boîte de réception est réservé à ARNOVA.",
             "breach": "En cas de violation de données personnelles, {company} la notifie à la CNIL dans les 72 heures après en avoir pris connaissance, sauf si elle n’est pas susceptible d’engendrer un risque pour vos droits (article 33 du RGPD), et vous en informe directement si ce risque est élevé (article 34)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "Le site ne dépose qu’un cookie technique, qui mémorise la langue d’affichage, et aucun traceur de mesure d’audience ou de publicité. Le détail figure sur la <link>page Cookies</link>."
+        }
+    },
+    "Cookies": {
+        "title": "Cookies",
+        "lead": "arnova.fr dépose un seul cookie, strictement nécessaire à l’affichage du site dans votre langue. C’est pourquoi aucun bandeau ne vous demande votre consentement.",
+        "list": {
+            "title": "Cookie déposé",
+            "intro": "Voici la liste complète des cookies que le site peut déposer dans votre navigateur.",
+            "caption": "Cookies déposés par arnova.fr",
+            "columns": {
+                "name": "Nom",
+                "party": "Émetteur",
+                "purpose": "Finalité",
+                "lifetime": "Durée de vie",
+                "consent": "Consentement"
+            },
+            "exemption": "Ce cookie est strictement nécessaire à la fourniture du service que vous demandez : il est donc exempté de consentement préalable, conformément à l’article 82 de la loi Informatique et Libertés et aux lignes directrices de la CNIL."
+        },
+        "locale": {
+            "party": "Premier niveau (arnova.fr)",
+            "purpose": "Mémoriser la langue d’affichage (français ou anglais) pour vous servir la bonne version des pages lors de vos prochaines visites.",
+            "lifetime": "Session : supprimé à la fermeture du navigateur",
+            "consent": "Exempté"
+        },
+        "none": {
+            "title": "Aucun traceur",
+            "analytics": "Aucune mesure d’audience : pas de Google Analytics ni d’outil équivalent.",
+            "ads": "Aucune publicité et aucun cookie publicitaire.",
+            "thirdParty": "Aucun traceur tiers : pas de bouton de réseau social, de vidéo intégrée ou de pixel de suivi.",
+            "fonts": "Les polices de caractères sont servies par le site lui-même : votre navigateur ne contacte aucun service de polices tiers.",
+            "consequence": "Le site ne recourt donc à aucun cookie ou traceur soumis à votre consentement."
+        },
+        "manage": {
+            "title": "Gérer les cookies",
+            "body": "Vous pouvez à tout moment supprimer ce cookie ou bloquer les cookies depuis les réglages de votre navigateur. Le site reste entièrement utilisable : la langue sera simplement déduite à nouveau de l’adresse de la page ou des préférences de votre navigateur.",
+            "privacy": "Pour les autres données traitées lors de votre visite, notamment les journaux d’hébergement, consultez la <link>politique de confidentialité</link>."
         }
     },
     "NotFound": {

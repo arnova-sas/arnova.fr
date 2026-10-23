@@ -92,6 +92,11 @@ function LegalNotice() {
                                         {chunks}
                                     </Link>
                                 ),
+                                cookies: (chunks) => (
+                                    <Link href="/cookies" className={legalLinkClass}>
+                                        {chunks}
+                                    </Link>
+                                ),
                             })}
                         </p>
                     ),
