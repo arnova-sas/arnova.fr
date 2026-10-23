@@ -15,7 +15,9 @@ export function SiteFooter() {
                     <div className="max-w-sm">
                         <div className="flex items-center gap-2.5">
                             <LogoMark className="h-8 w-8" />
-                            <p className="font-display text-lg font-bold tracking-[0.18em] text-foreground">ARNOVA</p>
+                            <p className="font-display text-lg font-bold tracking-[0.18em] text-foreground">
+                                {company.name}
+                            </p>
                         </div>
                         <p className="mt-3 text-sm leading-relaxed text-muted">{t('tagline')}</p>
                     </div>

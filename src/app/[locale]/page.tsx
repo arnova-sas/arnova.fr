@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const t = await getTranslations({ locale, namespace: 'Metadata.home' })
 
     return {
-        title: t('title'),
+        // The home title already carries the brand: `absolute` skips the "%s — ARNOVA" template.
+        title: { absolute: t('title') },
         description: t('description'),
         alternates: buildAlternates('/', locale),
         openGraph: { title: t('title'), description: t('description'), url: buildAlternates('/', locale).canonical },

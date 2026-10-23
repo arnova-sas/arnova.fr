@@ -11,6 +11,15 @@ bilingual FR/EN via next-intl, deployed on Vercel.
 Read `README.md` first — it documents the structure, the i18n rules and the deployment
 setup. The points below are the ones that are easy to get wrong.
 
+## Twin site
+
+**leutheria.co** (`/Users/guillaume/Sites/leutheria/leutheria.co`, GitHub `leutheria`) is built from the same template: same components, layout, header,
+footer, contact form, token names in `globals.css` and checks in `scripts/`. Mirror every layout or
+component change there, so the two sites keep presenting the template the same way (language switch
+`FR | EN`, same form labels, same class names). Only brand content differs: names, colours, copy,
+logo, links (Leutheria's Facebook link, Umami analytics) and the URL structure, which each site
+inherited and must keep.
+
 ## Conventions
 
 - **Package manager is pnpm.** Never npm or yarn. Its version is pinned by `packageManager` in
