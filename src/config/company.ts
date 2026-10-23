@@ -29,7 +29,7 @@ export const company = {
         city: 'Paris',
         country: 'France',
     },
-    email: 'arnova.gsainthillier@gmail.com',
+    email: 'contact@arnova.fr',
     publicationDirector: 'Guillaume Sainthillier',
     /** Required in French "mentions légales": identity of the hosting provider. */
     host: {
