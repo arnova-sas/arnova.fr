@@ -12,14 +12,27 @@
         },
         "legal": {
             "title": "Mentions légales",
-            "description": "Mentions légales du site arnova.fr : éditeur, hébergeur, propriété intellectuelle et données personnelles."
+            "description": "Mentions légales du site arnova.fr : éditeur, directeur de la publication, hébergeur, propriété intellectuelle et responsabilité."
+        },
+        "privacy": {
+            "title": "Politique de confidentialité",
+            "description": "Comment ARNOVA traite les données personnelles collectées sur arnova.fr : formulaire de contact, journaux d’hébergement, destinataires, durées de conservation et droits RGPD."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "description": "Le seul cookie déposé par arnova.fr mémorise la langue d’affichage. Aucune mesure d’audience, aucune publicité, aucun traceur tiers."
+        },
+        "notFound": {
+            "title": "Page introuvable"
         }
     },
     "Nav": {
         "home": "Accueil",
         "contact": "Contact",
         "legal": "Mentions légales",
-        "languageSwitcher": "Changer de langue"
+        "languageSwitcher": "Changer de langue",
+        "privacy": "Confidentialité",
+        "cookies": "Cookies"
     },
     "Home": {
         "hero": {
@@ -90,7 +103,7 @@
         "success": "Merci, votre message est bien parti. Nous revenons vers vous rapidement.",
         "error": "L’envoi a échoué. Réessayez ou écrivez-nous directement à {email}.",
         "emailSubject": "Nouveau message de {name} — arnova.fr",
-        "privacyNotice": "Les informations saisies servent uniquement à traiter votre demande. Elles sont transmises par notre prestataire d’envoi de formulaires et ne font l’objet d’aucune cession à des tiers.",
+        "privacyNotice": "Votre nom, votre adresse e-mail et votre message sont transmis par {form} puis reçus dans la messagerie {mailService} ({mailProvider}) d’ARNOVA, uniquement pour traiter votre demande, et conservés trois ans après notre dernier échange. Destinataires, transferts et droits : <link>politique de confidentialité</link>.",
         "unconfigured": "Le formulaire n’est pas encore configuré. En attendant, écrivez-nous directement :",
         "errors": {
             "required": "Ce champ est obligatoire.",
@@ -105,51 +118,161 @@
             "responseValue": "Sous 48 heures ouvrées en général."
         }
     },
+    "LegalLayout": {
+        "eyebrow": "Informations juridiques",
+        "breadcrumbLabel": "Fil d’Ariane",
+        "home": "Accueil",
+        "tabsLabel": "Documents juridiques",
+        "tocTitle": "Sur cette page",
+        "updatedOn": "Dernière mise à jour : {date}"
+    },
+    "LegalPages": {
+        "notice": "Mentions légales",
+        "privacy": "Confidentialité",
+        "cookies": "Cookies"
+    },
     "Legal": {
         "title": "Mentions légales",
         "lead": "Informations légales relatives au site arnova.fr, conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
-        "updatedOn": "Dernière mise à jour : {date}",
-        "editor": {
+        "identity": {
             "title": "Éditeur du site",
             "nameLabel": "Dénomination sociale",
-            "formLabel": "Forme juridique",
             "formValue": "Société par actions simplifiée (SAS)",
-            "capitalLabel": "Capital social",
+            "directorLabel": "Directeur de la publication",
+            "directorRole": "Président de {company}",
             "addressLabel": "Siège social",
             "rcsLabel": "Immatriculation",
             "rcsValue": "RCS {city} {siren}",
-            "siretLabel": "SIRET (siège)",
+            "siretValue": "SIRET (siège) : {siret}",
             "vatLabel": "TVA intracommunautaire",
+            "capitalLabel": "Capital social",
             "apeLabel": "Code APE",
             "apeValue": "{code} — Portails Internet",
             "emailLabel": "Contact"
         },
-        "director": {
-            "title": "Directeur de la publication",
-            "body": "{name}, en qualité de président de la société {company}."
-        },
-        "host": {
-            "title": "Hébergeur",
-            "body": "Le site est hébergé par {name}, {address}, {country}. Site web : {url}."
+        "hosting": {
+            "title": "Hébergement et diffusion",
+            "host": "Le site est hébergé par {name}, {address}, {country} — <link>{url}</link>.",
+            "cdn": "Les pages sont diffusées par le réseau périphérique (edge network) de Vercel, qui joue le rôle de réseau de diffusion de contenu (CDN) : chaque page est servie depuis le point de présence le plus proche du visiteur.",
+            "dns": "Le nom de domaine est géré chez <link>{name}</link>, en mode DNS uniquement : Cloudflare indique l’adresse des serveurs de Vercel mais ne relaie pas le trafic du site et n’accède pas à son contenu."
         },
         "intellectualProperty": {
             "title": "Propriété intellectuelle",
             "body": "L’ensemble des éléments composant ce site — textes, images, logos, marques, structure et code — est protégé par le droit d’auteur et le droit des marques. Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans autorisation écrite préalable de {company}, est interdite."
         },
-        "personalData": {
-            "title": "Données personnelles",
-            "body": "Les seules données personnelles collectées sur ce site sont celles que vous transmettez volontairement via le formulaire de contact : nom, adresse e-mail et contenu du message. Elles sont traitées dans le seul but de répondre à votre demande, sur la base de votre consentement, et ne sont jamais cédées ni revendues à des tiers.",
-            "processor": "L’acheminement des messages est assuré par notre prestataire technique d’envoi de formulaires, qui agit en qualité de sous-traitant et ne conserve pas le contenu des messages au-delà de leur transmission.",
-            "retention": "Les échanges sont conservés le temps nécessaire au traitement de votre demande, puis archivés ou supprimés.",
-            "rights": "Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation et d’opposition sur vos données. Pour l’exercer, écrivez à {email}. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr)."
-        },
-        "cookies": {
-            "title": "Cookies",
-            "body": "Ce site ne dépose aucun cookie publicitaire ni traceur de mesure d’audience. Seuls les cookies strictement nécessaires à son fonctionnement — notamment la mémorisation de la langue choisie — peuvent être utilisés ; ils sont exemptés de consentement préalable."
-        },
         "liability": {
             "title": "Responsabilité",
             "body": "{company} s’efforce d’assurer l’exactitude et la mise à jour des informations publiées sur ce site, sans pouvoir en garantir l’exhaustivité. Le site peut contenir des liens vers des sites tiers dont le contenu n’engage pas la responsabilité de {company}."
+        },
+        "data": {
+            "title": "Données personnelles et cookies",
+            "body": "Le traitement des données personnelles collectées sur ce site est décrit dans la <privacy>politique de confidentialité</privacy>, et le seul cookie qu’il dépose sur la <cookies>page Cookies</cookies>."
+        }
+    },
+    "Privacy": {
+        "title": "Politique de confidentialité",
+        "lead": "Ce site collecte très peu de données personnelles. Cette page détaille, traitement par traitement, ce qui est collecté, pourquoi, par qui c’est reçu, combien de temps c’est conservé et comment exercer vos droits.",
+        "labels": {
+            "data": "Données",
+            "purpose": "Finalité",
+            "legalBasis": "Base légale",
+            "recipients": "Destinataires",
+            "retention": "Conservation"
+        },
+        "controller": {
+            "title": "Responsable du traitement",
+            "body": "Le responsable du traitement est {company}, {legalForm} dont le siège social est situé {address}. Pour toute question relative à vos données, écrivez à <mail>{email}</mail>."
+        },
+        "contactForm": {
+            "title": "Formulaire de contact",
+            "intro": "Lorsque vous nous écrivez via le formulaire de contact, votre message est envoyé directement depuis votre navigateur au service d’envoi de formulaires, qui nous le transmet par e-mail.",
+            "data": "Votre nom, votre adresse e-mail et le contenu de votre message, ainsi que l’adresse IP de votre navigateur, que le service d’envoi de formulaires reçoit au moment de l’envoi.",
+            "purpose": "Répondre à votre demande et assurer le suivi de nos échanges.",
+            "legalBasis": "L’intérêt légitime d’ARNOVA à répondre aux personnes qui la contactent (article 6.1.f du RGPD) et, lorsque votre demande porte sur un projet ou un partenariat, l’exécution de mesures précontractuelles prises à votre demande (article 6.1.b).",
+            "recipients": "<strong>{form}</strong>, service édité par {operator} ({country}), qui reçoit le formulaire et le transmet par e-mail ; pour filtrer les envois abusifs, il peut soumettre votre adresse IP et votre adresse e-mail à des services anti-spam. <strong>{mailProvider}</strong> ({mailService}), qui héberge la boîte de réception d’ARNOVA.",
+            "retention": "Trois ans à compter de notre dernier échange, puis suppression. De son côté, {form} indique dans sa <link>politique de confidentialité</link> conserver les envois trois ans au maximum."
+        },
+        "hostingLogs": {
+            "title": "Journaux d’hébergement ({host})",
+            "intro": "Comme tout serveur web, l’infrastructure de {host} enregistre automatiquement des journaux techniques pour chaque requête reçue, que vous utilisiez ou non le formulaire.",
+            "data": "Adresse IP, date et heure, page demandée, navigateur (user agent) et code de réponse de chaque requête.",
+            "purpose": "Faire fonctionner le site, le protéger contre les abus et diagnostiquer les erreurs.",
+            "legalBasis": "L’intérêt légitime d’ARNOVA à assurer la disponibilité et la sécurité du site (article 6.1.f du RGPD).",
+            "recipients": "{host}, hébergeur du site, agissant en qualité de sous-traitant.",
+            "retention": "Une durée courte, fixée par {host}, au terme de laquelle les journaux sont supprimés automatiquement (voir la <link>politique de confidentialité de {host}</link>)."
+        },
+        "transfers": {
+            "title": "Transferts hors de l’Union européenne",
+            "us": "{host} et {mailProvider} sont des sociétés établies aux États-Unis. Les transferts de données vers ces prestataires sont encadrés par le Data Privacy Framework UE–États-Unis, auquel tous deux adhèrent, ainsi que par les clauses contractuelles types adoptées par la Commission européenne.",
+            "form": "{form} est exploité par {operator}, société établie hors de l’Union européenne ({country}), sur une infrastructure hébergée notamment aux États-Unis. Ses transferts reposent sur les clauses contractuelles types de la Commission européenne, prévues par son accord de traitement des données."
+        },
+        "noSale": {
+            "title": "{company} ne vend pas vos données",
+            "body": "{company} ne vend, ne loue ni ne cède vos données personnelles. Elles ne servent ni à la prospection commerciale, ni au profilage, ni à la publicité ciblée."
+        },
+        "rights": {
+            "title": "Vos droits",
+            "intro": "Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants sur vos données :",
+            "items": {
+                "access": "<strong>Accès</strong> : obtenir la confirmation que des données vous concernant sont traitées, et en recevoir une copie.",
+                "rectification": "<strong>Rectification</strong> : faire corriger des données inexactes ou compléter des données incomplètes.",
+                "erasure": "<strong>Effacement</strong> : obtenir la suppression de vos données, notamment lorsqu’elles ne sont plus nécessaires.",
+                "restriction": "<strong>Limitation</strong> : faire geler temporairement l’utilisation de vos données, par exemple le temps de vérifier leur exactitude.",
+                "objection": "<strong>Opposition</strong> : vous opposer à un traitement fondé sur l’intérêt légitime, pour des raisons tenant à votre situation particulière.",
+                "portability": "<strong>Portabilité</strong> : recevoir les données que vous nous avez fournies dans un format structuré et lisible par machine, ou les faire transmettre à un autre responsable.",
+                "postMortem": "<strong>Directives post-mortem</strong> : définir le sort de vos données après votre décès (article 85 de la loi Informatique et Libertés).",
+                "withdrawal": "<strong>Retrait du consentement</strong> : lorsqu’un traitement repose sur votre consentement, le retirer à tout moment, sans remettre en cause les traitements déjà effectués."
+            },
+            "exercise": "Pour exercer ces droits, écrivez à <mail>{email}</mail>. Nous répondons dans un délai d’un mois, qui peut être prolongé de deux mois pour les demandes complexes ; en cas de doute raisonnable sur votre identité, nous pourrons vous demander de la confirmer."
+        },
+        "complaint": {
+            "title": "Réclamation auprès de la CNIL",
+            "body": "Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la Commission nationale de l’informatique et des libertés (CNIL) : <link>www.cnil.fr/fr/plaintes</link>."
+        },
+        "security": {
+            "title": "Sécurité et violations de données",
+            "measures": "Le site est servi exclusivement en HTTPS, et le formulaire est transmis chiffré au service d’envoi de formulaires. L’accès à la boîte de réception est réservé à ARNOVA.",
+            "breach": "En cas de violation de données personnelles, {company} la notifie à la CNIL dans les 72 heures après en avoir pris connaissance, sauf si elle n’est pas susceptible d’engendrer un risque pour vos droits (article 33 du RGPD), et vous en informe directement si ce risque est élevé (article 34)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "Le site ne dépose qu’un cookie technique, qui mémorise la langue d’affichage, et aucun traceur de mesure d’audience ou de publicité. Le détail figure sur la <link>page Cookies</link>."
+        }
+    },
+    "Cookies": {
+        "title": "Cookies",
+        "lead": "arnova.fr dépose un seul cookie, strictement nécessaire à l’affichage du site dans votre langue. C’est pourquoi aucun bandeau ne vous demande votre consentement.",
+        "list": {
+            "title": "Cookie déposé",
+            "intro": "Voici la liste complète des cookies que le site peut déposer dans votre navigateur.",
+            "caption": "Cookies déposés par arnova.fr",
+            "columns": {
+                "name": "Nom",
+                "party": "Émetteur",
+                "purpose": "Finalité",
+                "lifetime": "Durée de vie",
+                "consent": "Consentement"
+            },
+            "exemption": "Ce cookie est strictement nécessaire à la fourniture du service que vous demandez : il est donc exempté de consentement préalable, conformément à l’article 82 de la loi Informatique et Libertés et aux lignes directrices de la CNIL."
+        },
+        "locale": {
+            "party": "Premier niveau (arnova.fr)",
+            "purpose": "Mémoriser la langue d’affichage (français ou anglais) pour vous servir la bonne version des pages lors de vos prochaines visites.",
+            "lifetime": "Session : supprimé à la fermeture du navigateur",
+            "consent": "Exempté"
+        },
+        "none": {
+            "title": "Aucun traceur",
+            "analytics": "Aucune mesure d’audience : pas de Google Analytics ni d’outil équivalent.",
+            "ads": "Aucune publicité et aucun cookie publicitaire.",
+            "thirdParty": "Aucun traceur tiers : pas de bouton de réseau social, de vidéo intégrée ou de pixel de suivi.",
+            "fonts": "Les polices de caractères sont servies par le site lui-même : votre navigateur ne contacte aucun service de polices tiers.",
+            "consequence": "Le site ne recourt donc à aucun cookie ou traceur soumis à votre consentement."
+        },
+        "manage": {
+            "title": "Gérer les cookies",
+            "body": "Vous pouvez à tout moment supprimer ce cookie ou bloquer les cookies depuis les réglages de votre navigateur. Le site reste entièrement utilisable : la langue sera simplement déduite à nouveau de l’adresse de la page ou des préférences de votre navigateur.",
+            "privacy": "Pour les autres données traitées lors de votre visite, notamment les journaux d’hébergement, consultez la <link>politique de confidentialité</link>."
         }
     },
     "NotFound": {

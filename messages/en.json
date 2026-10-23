@@ -12,14 +12,27 @@
         },
         "legal": {
             "title": "Legal notice",
-            "description": "Legal notice for arnova.fr: publisher, hosting provider, intellectual property and personal data."
+            "description": "Legal notice for arnova.fr: publisher, publication director, hosting provider, intellectual property and liability."
+        },
+        "privacy": {
+            "title": "Privacy policy",
+            "description": "How ARNOVA handles personal data collected on arnova.fr: contact form, hosting logs, recipients, retention periods and GDPR rights."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "description": "The only cookie arnova.fr sets remembers your display language. No audience measurement, no advertising, no third-party tracker."
+        },
+        "notFound": {
+            "title": "Page not found"
         }
     },
     "Nav": {
         "home": "Home",
         "contact": "Contact",
         "legal": "Legal notice",
-        "languageSwitcher": "Change language"
+        "languageSwitcher": "Change language",
+        "privacy": "Privacy",
+        "cookies": "Cookies"
     },
     "Home": {
         "hero": {
@@ -90,7 +103,7 @@
         "success": "Thanks, your message is on its way. We will get back to you shortly.",
         "error": "Sending failed. Please try again, or write to us directly at {email}.",
         "emailSubject": "New message from {name} — arnova.fr",
-        "privacyNotice": "The details you enter are used solely to handle your request. They are delivered through our form-sending provider and are never sold or shared with third parties.",
+        "privacyNotice": "Your name, email address and message are delivered by {form} to ARNOVA’s {mailService} inbox ({mailProvider}), used only to handle your request and kept for three years after our last exchange. Recipients, transfers and your rights: <link>privacy policy</link>.",
         "unconfigured": "The form is not configured yet. In the meantime, write to us directly:",
         "errors": {
             "required": "This field is required.",
@@ -105,51 +118,161 @@
             "responseValue": "Usually within 48 working hours."
         }
     },
+    "LegalLayout": {
+        "eyebrow": "Legal information",
+        "breadcrumbLabel": "Breadcrumb",
+        "home": "Home",
+        "tabsLabel": "Legal documents",
+        "tocTitle": "On this page",
+        "updatedOn": "Last updated: {date}"
+    },
+    "LegalPages": {
+        "notice": "Legal notice",
+        "privacy": "Privacy",
+        "cookies": "Cookies"
+    },
     "Legal": {
         "title": "Legal notice",
         "lead": "Legal information about arnova.fr, published in accordance with French Act No. 2004-575 of 21 June 2004 on confidence in the digital economy.",
-        "updatedOn": "Last updated: {date}",
-        "editor": {
+        "identity": {
             "title": "Site publisher",
             "nameLabel": "Company name",
-            "formLabel": "Legal form",
             "formValue": "Simplified joint-stock company (SAS)",
-            "capitalLabel": "Share capital",
+            "directorLabel": "Publication director",
+            "directorRole": "President of {company}",
             "addressLabel": "Registered office",
             "rcsLabel": "Registration",
             "rcsValue": "{city} Trade and Companies Register — {siren}",
-            "siretLabel": "SIRET (head office)",
+            "siretValue": "SIRET (head office): {siret}",
             "vatLabel": "Intra-community VAT",
+            "capitalLabel": "Share capital",
             "apeLabel": "Industry code",
             "apeValue": "{code} — Web portals",
             "emailLabel": "Contact"
         },
-        "director": {
-            "title": "Publication director",
-            "body": "{name}, in his capacity as president of {company}."
-        },
-        "host": {
-            "title": "Hosting provider",
-            "body": "This site is hosted by {name}, {address}, {country}. Website: {url}."
+        "hosting": {
+            "title": "Hosting and delivery",
+            "host": "This site is hosted by {name}, {address}, {country} — <link>{url}</link>.",
+            "cdn": "Pages are delivered by Vercel’s edge network, which acts as a content delivery network (CDN): each page is served from the point of presence closest to the visitor.",
+            "dns": "The domain name is managed at <link>{name}</link> in DNS-only mode: Cloudflare points visitors to Vercel’s servers but does not relay the site’s traffic or access its content."
         },
         "intellectualProperty": {
             "title": "Intellectual property",
             "body": "Every element making up this site — text, images, logos, trade marks, structure and code — is protected by copyright and trade mark law. Any reproduction, representation, adaptation or exploitation, in whole or in part, without the prior written consent of {company}, is prohibited."
         },
-        "personalData": {
-            "title": "Personal data",
-            "body": "The only personal data collected on this site is what you voluntarily submit through the contact form: name, email address and message content. It is processed for the sole purpose of answering your request, on the basis of your consent, and is never sold or shared with third parties.",
-            "processor": "Message delivery is handled by our form-sending provider, acting as a processor, which does not retain message content beyond its transmission.",
-            "retention": "Exchanges are kept for as long as needed to handle your request, then archived or deleted.",
-            "rights": "Under the General Data Protection Regulation (GDPR) and the French Data Protection Act, you have the right to access, rectify, erase, restrict and object to the processing of your data. To exercise those rights, write to {email}. You may also lodge a complaint with the CNIL, the French data protection authority (www.cnil.fr)."
-        },
-        "cookies": {
-            "title": "Cookies",
-            "body": "This site sets no advertising cookies and no analytics trackers. Only cookies strictly necessary for it to work — notably remembering your chosen language — may be used; these are exempt from prior consent."
-        },
         "liability": {
             "title": "Liability",
             "body": "{company} strives to keep the information published on this site accurate and up to date, without being able to guarantee that it is exhaustive. The site may link to third-party sites whose content is not the responsibility of {company}."
+        },
+        "data": {
+            "title": "Personal data and cookies",
+            "body": "How personal data collected on this site is handled is described in the <privacy>privacy policy</privacy>, and the only cookie it sets on the <cookies>Cookies page</cookies>."
+        }
+    },
+    "Privacy": {
+        "title": "Privacy policy",
+        "lead": "This site collects very little personal data. This page sets out, processing by processing, what is collected, why, who receives it, how long it is kept and how to exercise your rights.",
+        "labels": {
+            "data": "Data",
+            "purpose": "Purpose",
+            "legalBasis": "Legal basis",
+            "recipients": "Recipients",
+            "retention": "Retention"
+        },
+        "controller": {
+            "title": "Data controller",
+            "body": "The data controller is {company}, a French {legalForm} whose registered office is at {address}. For any question about your data, write to <mail>{email}</mail>."
+        },
+        "contactForm": {
+            "title": "Contact form",
+            "intro": "When you write to us through the contact form, your message is sent straight from your browser to the form-delivery service, which forwards it to us by email.",
+            "data": "Your name, your email address and the content of your message, plus your browser’s IP address, which the form-delivery service receives when you submit.",
+            "purpose": "Answering your request and following up on our exchanges.",
+            "legalBasis": "ARNOVA’s legitimate interest in answering people who contact it (GDPR Article 6(1)(f)) and, when your request concerns a project or a partnership, steps taken at your request prior to entering into a contract (Article 6(1)(b)).",
+            "recipients": "<strong>{form}</strong>, a service run by {operator} ({country}), which receives the form and forwards it by email; to filter abuse, it may submit your IP address and email address to anti-spam services. <strong>{mailProvider}</strong> ({mailService}), which hosts ARNOVA’s inbox.",
+            "retention": "Three years from our last exchange, then deleted. For its part, {form} states in its <link>privacy policy</link> that it keeps submissions for at most three years."
+        },
+        "hostingLogs": {
+            "title": "Hosting logs ({host})",
+            "intro": "Like any web server, the {host} infrastructure automatically records technical logs for every request it receives, whether or not you use the form.",
+            "data": "IP address, date and time, requested page, browser (user agent) and response code of each request.",
+            "purpose": "Running the site, protecting it against abuse and diagnosing errors.",
+            "legalBasis": "ARNOVA’s legitimate interest in keeping the site available and secure (GDPR Article 6(1)(f)).",
+            "recipients": "{host}, the site’s hosting provider, acting as a processor.",
+            "retention": "A short period set by {host}, after which the logs are deleted automatically (see the <link>{host} privacy policy</link>)."
+        },
+        "transfers": {
+            "title": "Transfers outside the European Union",
+            "us": "{host} and {mailProvider} are companies established in the United States. Transfers of data to these providers are covered by the EU–U.S. Data Privacy Framework, to which both are certified, and by the standard contractual clauses adopted by the European Commission.",
+            "form": "{form} is run by {operator}, a company established outside the European Union ({country}), on infrastructure hosted in the United States among other places. Its transfers rely on the European Commission’s standard contractual clauses, set out in its data processing agreement."
+        },
+        "noSale": {
+            "title": "{company} does not sell your data",
+            "body": "{company} does not sell, rent or hand over your personal data. It is never used for direct marketing, profiling or targeted advertising."
+        },
+        "rights": {
+            "title": "Your rights",
+            "intro": "Under the General Data Protection Regulation (GDPR) and the French Data Protection Act, you have the following rights over your data:",
+            "items": {
+                "access": "<strong>Access</strong>: confirmation that data about you is processed, and a copy of it.",
+                "rectification": "<strong>Rectification</strong>: having inaccurate data corrected or incomplete data completed.",
+                "erasure": "<strong>Erasure</strong>: having your data deleted, in particular once it is no longer needed.",
+                "restriction": "<strong>Restriction</strong>: having the use of your data temporarily frozen, for instance while its accuracy is checked.",
+                "objection": "<strong>Objection</strong>: objecting to processing based on legitimate interest, on grounds relating to your particular situation.",
+                "portability": "<strong>Portability</strong>: receiving the data you provided in a structured, machine-readable format, or having it sent to another controller.",
+                "postMortem": "<strong>Post-mortem instructions</strong>: deciding what happens to your data after your death (Article 85 of the French Data Protection Act).",
+                "withdrawal": "<strong>Withdrawal of consent</strong>: where processing relies on your consent, withdrawing it at any time, without affecting processing already carried out."
+            },
+            "exercise": "To exercise these rights, write to <mail>{email}</mail>. We answer within one month, which may be extended by two months for complex requests; if we have reasonable doubts about your identity, we may ask you to confirm it."
+        },
+        "complaint": {
+            "title": "Complaint to the CNIL",
+            "body": "If, after contacting us, you believe your rights have not been respected, you may lodge a complaint with the CNIL, the French data protection authority: <link>www.cnil.fr/fr/plaintes</link>."
+        },
+        "security": {
+            "title": "Security and data breaches",
+            "measures": "The site is served over HTTPS only, and the form is sent encrypted to the form-delivery service. Access to the inbox is restricted to ARNOVA.",
+            "breach": "In the event of a personal data breach, {company} notifies the CNIL within 72 hours of becoming aware of it, unless it is unlikely to result in a risk to your rights (GDPR Article 33), and informs you directly if that risk is high (Article 34)."
+        },
+        "cookies": {
+            "title": "Cookies",
+            "body": "The site sets a single technical cookie, which remembers your display language, and no audience-measurement or advertising tracker. The details are on the <link>Cookies page</link>."
+        }
+    },
+    "Cookies": {
+        "title": "Cookies",
+        "lead": "arnova.fr sets a single cookie, strictly necessary to show the site in your language. That is why no banner asks for your consent.",
+        "list": {
+            "title": "Cookie set",
+            "intro": "This is the complete list of cookies the site may set in your browser.",
+            "caption": "Cookies set by arnova.fr",
+            "columns": {
+                "name": "Name",
+                "party": "Set by",
+                "purpose": "Purpose",
+                "lifetime": "Lifetime",
+                "consent": "Consent"
+            },
+            "exemption": "This cookie is strictly necessary to provide the service you ask for, so it is exempt from prior consent under Article 82 of the French Data Protection Act and the CNIL guidelines."
+        },
+        "locale": {
+            "party": "First party (arnova.fr)",
+            "purpose": "Remembering your display language (French or English) so that the right version of each page is served on later visits.",
+            "lifetime": "Session: deleted when the browser closes",
+            "consent": "Exempt"
+        },
+        "none": {
+            "title": "No trackers",
+            "analytics": "No audience measurement: no Google Analytics or similar tool.",
+            "ads": "No advertising and no advertising cookies.",
+            "thirdParty": "No third-party trackers: no social media buttons, embedded videos or tracking pixels.",
+            "fonts": "Fonts are served by the site itself: your browser does not contact any third-party font service.",
+            "consequence": "The site therefore uses no cookie or tracker that would require your consent."
+        },
+        "manage": {
+            "title": "Managing cookies",
+            "body": "You can delete this cookie or block cookies at any time in your browser settings. The site remains fully usable: the language will simply be worked out again from the page address or your browser preferences.",
+            "privacy": "For the other data processed during your visit, including hosting logs, see the <link>privacy policy</link>."
         }
     },
     "NotFound": {
