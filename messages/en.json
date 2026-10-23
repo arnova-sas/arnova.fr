@@ -100,7 +100,7 @@
         "success": "Thanks, your message is on its way. We will get back to you shortly.",
         "error": "Sending failed. Please try again, or write to us directly at {email}.",
         "emailSubject": "New message from {name} — arnova.fr",
-        "privacyNotice": "The details you enter are used solely to handle your request. They are delivered through our form-sending provider and are never sold or shared with third parties.",
+        "privacyNotice": "Your name, email address and message are delivered by {form} to ARNOVA’s {mailService} inbox ({mailProvider}), used only to handle your request and kept for three years after our last exchange. Recipients, transfers and your rights: <link>privacy policy</link>.",
         "unconfigured": "The form is not configured yet. In the meantime, write to us directly:",
         "errors": {
             "required": "This field is required.",

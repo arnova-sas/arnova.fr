@@ -100,7 +100,7 @@
         "success": "Merci, votre message est bien parti. Nous revenons vers vous rapidement.",
         "error": "L’envoi a échoué. Réessayez ou écrivez-nous directement à {email}.",
         "emailSubject": "Nouveau message de {name} — arnova.fr",
-        "privacyNotice": "Les informations saisies servent uniquement à traiter votre demande. Elles sont transmises par notre prestataire d’envoi de formulaires et ne font l’objet d’aucune cession à des tiers.",
+        "privacyNotice": "Votre nom, votre adresse e-mail et votre message sont transmis par {form} puis reçus dans la messagerie {mailService} ({mailProvider}) d’ARNOVA, uniquement pour traiter votre demande, et conservés trois ans après notre dernier échange. Destinataires, transferts et droits : <link>politique de confidentialité</link>.",
         "unconfigured": "Le formulaire n’est pas encore configuré. En attendant, écrivez-nous directement :",
         "errors": {
             "required": "Ce champ est obligatoire.",
