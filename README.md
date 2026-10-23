@@ -3,8 +3,8 @@
 Corporate website for **ARNOVA** — a French digital marketing company and web publisher
 (SAS, RCS Paris, APE 63.12Z "Portails Internet").
 
-Bilingual (French / English) marketing site with a homepage, a contact form and a
-legal notice.
+Bilingual (French / English) marketing site with a homepage, a contact form and three
+legal pages: legal notice, privacy policy and cookies.
 
 ## Stack
 
@@ -45,15 +45,19 @@ rendering a button that would silently fail.
 messages/               fr.json / en.json — every user-facing string
 src/
   app/
-    [locale]/           layout, home, contact, mentions-legales, not-found
+    [locale]/           layout, home, contact, legal pages (mentions-legales,
+                        confidentialite, cookies), not-found + [...rest] catch-all
     globals.css         Tailwind v4 theme tokens (light + dark)
     robots.ts
     sitemap.ts
   components/           header, footer, locale switcher, contact form, primitives
+    legal/              shared legal-page layout + scrollspy table of contents
   config/company.ts     single source of truth for legal + contact identity
   i18n/                 routing, navigation wrappers, per-request config
   lib/
     contact-form.ts     form validation rules (locale-agnostic error codes)
+    legal-pages.ts      legal pages in tab order, with their last-updated dates
+    structured-data.ts  Organization JSON-LD for the home page
     metadata.ts         canonical + hreflang helpers
   proxy.ts              locale negotiation (Next 16 renamed `middleware` -> `proxy`)
 scripts/
@@ -83,8 +87,16 @@ both the footer and the legal notice read from it. The values come from the Fren
 public company registry (INSEE / RNE) for SIREN **942070392**. The intra-community VAT
 number is derived from the SIREN: `key = (12 + 3 × (SIREN mod 97)) mod 97`.
 
-Update `LEGAL_UPDATED_ON` in `src/app/[locale]/mentions-legales/page.tsx` whenever the
-wording of the notice changes.
+The third-party services the site relies on (host, DNS, form delivery, mailbox) are
+listed there too, so the legal pages name them from one place. Countries are stored as
+ISO codes and printed in the reader's language.
+
+When a legal page's wording changes, bump its `updatedOn` in `src/lib/legal-pages.ts`.
+When the home or contact copy changes, bump its `lastModified` in `src/app/sitemap.ts`.
+
+The privacy policy states what Web3Forms' own privacy policy says: it keeps submissions
+for at most three years and may pass the sender's IP and email to anti-spam services.
+Re-check <https://web3forms.com/privacy> if that page is reworded.
 
 ## Scripts
 
