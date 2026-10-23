@@ -1,14 +1,11 @@
 import type { Metadata } from 'next'
-import { useFormatter, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
-import { Container } from '@/components/container'
+import { LegalLayout, legalLinkClass } from '@/components/legal/legal-layout'
 import { company, formattedAddress } from '@/config/company'
 import type { Locale } from '@/i18n/routing'
 import { buildAlternates } from '@/lib/metadata'
-
-/** Bump this whenever the wording below changes. */
-const LEGAL_UPDATED_ON = new Date('2026-09-18T00:00:00Z')
 
 type PageProps = { params: Promise<{ locale: Locale }> }
 
@@ -29,108 +26,110 @@ export default async function LegalPage({ params }: PageProps) {
     const { locale } = await params
     setRequestLocale(locale)
 
-    return (
-        <Container className="py-20 sm:py-28">
-            <LegalContent />
-        </Container>
-    )
+    return <LegalNotice />
 }
 
-function LegalContent() {
+function LegalNotice() {
     const t = useTranslations('Legal')
-    const format = useFormatter()
+    const external = (url: string) => (chunks: ReactNode) => (
+        <a href={url} className={legalLinkClass} rel="noopener">
+            {chunks}
+        </a>
+    )
 
     return (
-        <article className="max-w-3xl">
-            <h1 className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">{t('title')}</h1>
-            <p className="mt-5 text-lg leading-relaxed text-muted">{t('lead')}</p>
-            <p className="mt-2 text-sm text-muted">
-                {t('updatedOn', { date: format.dateTime(LEGAL_UPDATED_ON, { dateStyle: 'long' }) })}
-            </p>
-
-            <Editor />
-
-            <Section title={t('director.title')}>
-                <p>{t('director.body', { name: company.publicationDirector, company: company.name })}</p>
-            </Section>
-
-            <Section title={t('host.title')}>
-                <p>
-                    {t('host.body', {
-                        name: company.host.name,
-                        address: company.host.address,
-                        country: company.host.country,
-                        url: company.host.url,
-                    })}
-                </p>
-            </Section>
-
-            <Section title={t('intellectualProperty.title')}>
-                <p>{t('intellectualProperty.body', { company: company.name })}</p>
-            </Section>
-
-            <Section title={t('personalData.title')}>
-                <p>{t('personalData.body')}</p>
-                <p>{t('personalData.processor')}</p>
-                <p>{t('personalData.retention')}</p>
-                <p>{t('personalData.rights', { email: company.email })}</p>
-            </Section>
-
-            <Section title={t('cookies.title')}>
-                <p>{t('cookies.body')}</p>
-            </Section>
-
-            <Section title={t('liability.title')}>
-                <p>{t('liability.body', { company: company.name })}</p>
-            </Section>
-        </article>
+        <LegalLayout
+            current="notice"
+            title={t('title')}
+            lead={t('lead')}
+            identity={{ id: 'editeur', title: t('identity.title'), content: <Identity /> }}
+            sections={[
+                {
+                    id: 'hebergement',
+                    title: t('hosting.title'),
+                    content: (
+                        <>
+                            <p>
+                                {t.rich('hosting.host', {
+                                    name: company.host.name,
+                                    address: company.host.address,
+                                    country: company.host.country,
+                                    url: company.host.url,
+                                    link: external(company.host.url),
+                                })}
+                            </p>
+                            <p>{t('hosting.cdn')}</p>
+                            <p>
+                                {t.rich('hosting.dns', {
+                                    name: company.dnsProvider.name,
+                                    link: external(company.dnsProvider.url),
+                                })}
+                            </p>
+                        </>
+                    ),
+                },
+                {
+                    id: 'propriete-intellectuelle',
+                    title: t('intellectualProperty.title'),
+                    content: <p>{t('intellectualProperty.body', { company: company.name })}</p>,
+                },
+                {
+                    id: 'responsabilite',
+                    title: t('liability.title'),
+                    content: <p>{t('liability.body', { company: company.name })}</p>,
+                },
+            ]}
+        />
     )
 }
 
-function Editor() {
-    const t = useTranslations('Legal.editor')
+/** Publisher identity — shown on the legal notice only, never repeated on the other legal pages. */
+function Identity() {
+    const t = useTranslations('Legal.identity')
 
-    const rows = [
-        { label: t('nameLabel'), value: company.name },
-        { label: t('formLabel'), value: t('formValue') },
+    const tiles: { label: string; value: ReactNode; detail?: string; wide?: boolean; mono?: boolean }[] = [
+        { label: t('nameLabel'), value: company.name, detail: t('formValue') },
+        {
+            label: t('directorLabel'),
+            value: company.publicationDirector,
+            detail: t('directorRole', { company: company.name }),
+        },
+        { label: t('addressLabel'), value: formattedAddress, wide: true },
+        {
+            label: t('rcsLabel'),
+            value: t('rcsValue', { city: company.rcsCity, siren: company.siren }),
+            detail: t('siretValue', { siret: company.siret }),
+        },
+        { label: t('vatLabel'), value: company.vat, mono: true },
         { label: t('capitalLabel'), value: company.capital },
-        { label: t('addressLabel'), value: formattedAddress },
-        { label: t('rcsLabel'), value: t('rcsValue', { city: company.rcsCity, siren: company.siren }) },
-        { label: t('siretLabel'), value: company.siret },
-        { label: t('vatLabel'), value: company.vat },
         { label: t('apeLabel'), value: t('apeValue', { code: company.ape }) },
+        {
+            label: t('emailLabel'),
+            value: (
+                <a href={`mailto:${company.email}`} className={`${legalLinkClass} break-all`}>
+                    {company.email}
+                </a>
+            ),
+            wide: true,
+        },
     ]
 
     return (
-        <Section title={t('title')}>
-            <dl className="not-prose grid gap-px overflow-hidden rounded-2xl border border-border bg-border">
-                {rows.map((row) => (
-                    <div key={row.label} className="grid gap-1 bg-background p-4 sm:grid-cols-[200px_1fr] sm:gap-4">
-                        <dt className="text-xs font-semibold uppercase tracking-widest text-muted">{row.label}</dt>
-                        <dd className="text-sm text-foreground">{row.value}</dd>
-                    </div>
-                ))}
-                <div className="grid gap-1 bg-background p-4 sm:grid-cols-[200px_1fr] sm:gap-4">
-                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted">{t('emailLabel')}</dt>
-                    <dd className="text-sm">
-                        <a
-                            href={`mailto:${company.email}`}
-                            className="text-foreground underline-offset-4 hover:text-accent hover:underline"
-                        >
-                            {company.email}
-                        </a>
+        <dl className="grid gap-3 sm:grid-cols-2">
+            {tiles.map((tile) => (
+                <div
+                    key={tile.label}
+                    className={`rounded-xl border border-border bg-background p-4 ${tile.wide ? 'sm:col-span-2' : ''}`}
+                >
+                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted">{tile.label}</dt>
+                    <dd
+                        className={`mt-1.5 text-base font-semibold text-foreground ${tile.mono ? 'font-mono tracking-wide' : ''}`}
+                    >
+                        {tile.value}
                     </dd>
+                    {tile.detail && <dd className="mt-0.5 text-sm text-muted">{tile.detail}</dd>}
                 </div>
-            </dl>
-        </Section>
-    )
-}
-
-function Section({ title, children }: { title: string; children: ReactNode }) {
-    return (
-        <section className="mt-12">
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">{title}</h2>
-            <div className="mt-4 flex flex-col gap-4 text-sm leading-relaxed text-muted">{children}</div>
-        </section>
+            ))}
+        </dl>
     )
 }

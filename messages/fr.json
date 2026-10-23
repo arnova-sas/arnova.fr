@@ -12,7 +12,7 @@
         },
         "legal": {
             "title": "Mentions légales",
-            "description": "Mentions légales du site arnova.fr : éditeur, hébergeur, propriété intellectuelle et données personnelles."
+            "description": "Mentions légales du site arnova.fr : éditeur, directeur de la publication, hébergeur, propriété intellectuelle et responsabilité."
         }
     },
     "Nav": {
@@ -105,47 +105,45 @@
             "responseValue": "Sous 48 heures ouvrées en général."
         }
     },
+    "LegalLayout": {
+        "eyebrow": "Informations juridiques",
+        "breadcrumbLabel": "Fil d’Ariane",
+        "home": "Accueil",
+        "tabsLabel": "Documents juridiques",
+        "tocTitle": "Sur cette page",
+        "updatedOn": "Dernière mise à jour : {date}"
+    },
+    "LegalPages": {
+        "notice": "Mentions légales"
+    },
     "Legal": {
         "title": "Mentions légales",
         "lead": "Informations légales relatives au site arnova.fr, conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.",
-        "updatedOn": "Dernière mise à jour : {date}",
-        "editor": {
+        "identity": {
             "title": "Éditeur du site",
             "nameLabel": "Dénomination sociale",
-            "formLabel": "Forme juridique",
             "formValue": "Société par actions simplifiée (SAS)",
-            "capitalLabel": "Capital social",
+            "directorLabel": "Directeur de la publication",
+            "directorRole": "Président de {company}",
             "addressLabel": "Siège social",
             "rcsLabel": "Immatriculation",
             "rcsValue": "RCS {city} {siren}",
-            "siretLabel": "SIRET (siège)",
+            "siretValue": "SIRET (siège) : {siret}",
             "vatLabel": "TVA intracommunautaire",
+            "capitalLabel": "Capital social",
             "apeLabel": "Code APE",
             "apeValue": "{code} — Portails Internet",
             "emailLabel": "Contact"
         },
-        "director": {
-            "title": "Directeur de la publication",
-            "body": "{name}, en qualité de président de la société {company}."
-        },
-        "host": {
-            "title": "Hébergeur",
-            "body": "Le site est hébergé par {name}, {address}, {country}. Site web : {url}."
+        "hosting": {
+            "title": "Hébergement et diffusion",
+            "host": "Le site est hébergé par {name}, {address}, {country} — <link>{url}</link>.",
+            "cdn": "Les pages sont diffusées par le réseau périphérique (edge network) de Vercel, qui joue le rôle de réseau de diffusion de contenu (CDN) : chaque page est servie depuis le point de présence le plus proche du visiteur.",
+            "dns": "Le nom de domaine est géré chez <link>{name}</link>, en mode DNS uniquement : Cloudflare indique l’adresse des serveurs de Vercel mais ne relaie pas le trafic du site et n’accède pas à son contenu."
         },
         "intellectualProperty": {
             "title": "Propriété intellectuelle",
             "body": "L’ensemble des éléments composant ce site — textes, images, logos, marques, structure et code — est protégé par le droit d’auteur et le droit des marques. Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans autorisation écrite préalable de {company}, est interdite."
-        },
-        "personalData": {
-            "title": "Données personnelles",
-            "body": "Les seules données personnelles collectées sur ce site sont celles que vous transmettez volontairement via le formulaire de contact : nom, adresse e-mail et contenu du message. Elles sont traitées dans le seul but de répondre à votre demande, sur la base de votre consentement, et ne sont jamais cédées ni revendues à des tiers.",
-            "processor": "L’acheminement des messages est assuré par notre prestataire technique d’envoi de formulaires, qui agit en qualité de sous-traitant et ne conserve pas le contenu des messages au-delà de leur transmission.",
-            "retention": "Les échanges sont conservés le temps nécessaire au traitement de votre demande, puis archivés ou supprimés.",
-            "rights": "Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation et d’opposition sur vos données. Pour l’exercer, écrivez à {email}. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr)."
-        },
-        "cookies": {
-            "title": "Cookies",
-            "body": "Ce site ne dépose aucun cookie publicitaire ni traceur de mesure d’audience. Seuls les cookies strictement nécessaires à son fonctionnement — notamment la mémorisation de la langue choisie — peuvent être utilisés ; ils sont exemptés de consentement préalable."
         },
         "liability": {
             "title": "Responsabilité",

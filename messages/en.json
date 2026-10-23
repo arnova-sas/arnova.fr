@@ -12,7 +12,7 @@
         },
         "legal": {
             "title": "Legal notice",
-            "description": "Legal notice for arnova.fr: publisher, hosting provider, intellectual property and personal data."
+            "description": "Legal notice for arnova.fr: publisher, publication director, hosting provider, intellectual property and liability."
         }
     },
     "Nav": {
@@ -105,47 +105,45 @@
             "responseValue": "Usually within 48 working hours."
         }
     },
+    "LegalLayout": {
+        "eyebrow": "Legal information",
+        "breadcrumbLabel": "Breadcrumb",
+        "home": "Home",
+        "tabsLabel": "Legal documents",
+        "tocTitle": "On this page",
+        "updatedOn": "Last updated: {date}"
+    },
+    "LegalPages": {
+        "notice": "Legal notice"
+    },
     "Legal": {
         "title": "Legal notice",
         "lead": "Legal information about arnova.fr, published in accordance with French Act No. 2004-575 of 21 June 2004 on confidence in the digital economy.",
-        "updatedOn": "Last updated: {date}",
-        "editor": {
+        "identity": {
             "title": "Site publisher",
             "nameLabel": "Company name",
-            "formLabel": "Legal form",
             "formValue": "Simplified joint-stock company (SAS)",
-            "capitalLabel": "Share capital",
+            "directorLabel": "Publication director",
+            "directorRole": "President of {company}",
             "addressLabel": "Registered office",
             "rcsLabel": "Registration",
             "rcsValue": "{city} Trade and Companies Register — {siren}",
-            "siretLabel": "SIRET (head office)",
+            "siretValue": "SIRET (head office): {siret}",
             "vatLabel": "Intra-community VAT",
+            "capitalLabel": "Share capital",
             "apeLabel": "Industry code",
             "apeValue": "{code} — Web portals",
             "emailLabel": "Contact"
         },
-        "director": {
-            "title": "Publication director",
-            "body": "{name}, in his capacity as president of {company}."
-        },
-        "host": {
-            "title": "Hosting provider",
-            "body": "This site is hosted by {name}, {address}, {country}. Website: {url}."
+        "hosting": {
+            "title": "Hosting and delivery",
+            "host": "This site is hosted by {name}, {address}, {country} — <link>{url}</link>.",
+            "cdn": "Pages are delivered by Vercel’s edge network, which acts as a content delivery network (CDN): each page is served from the point of presence closest to the visitor.",
+            "dns": "The domain name is managed at <link>{name}</link> in DNS-only mode: Cloudflare points visitors to Vercel’s servers but does not relay the site’s traffic or access its content."
         },
         "intellectualProperty": {
             "title": "Intellectual property",
             "body": "Every element making up this site — text, images, logos, trade marks, structure and code — is protected by copyright and trade mark law. Any reproduction, representation, adaptation or exploitation, in whole or in part, without the prior written consent of {company}, is prohibited."
-        },
-        "personalData": {
-            "title": "Personal data",
-            "body": "The only personal data collected on this site is what you voluntarily submit through the contact form: name, email address and message content. It is processed for the sole purpose of answering your request, on the basis of your consent, and is never sold or shared with third parties.",
-            "processor": "Message delivery is handled by our form-sending provider, acting as a processor, which does not retain message content beyond its transmission.",
-            "retention": "Exchanges are kept for as long as needed to handle your request, then archived or deleted.",
-            "rights": "Under the General Data Protection Regulation (GDPR) and the French Data Protection Act, you have the right to access, rectify, erase, restrict and object to the processing of your data. To exercise those rights, write to {email}. You may also lodge a complaint with the CNIL, the French data protection authority (www.cnil.fr)."
-        },
-        "cookies": {
-            "title": "Cookies",
-            "body": "This site sets no advertising cookies and no analytics trackers. Only cookies strictly necessary for it to work — notably remembering your chosen language — may be used; these are exempt from prior consent."
         },
         "liability": {
             "title": "Liability",

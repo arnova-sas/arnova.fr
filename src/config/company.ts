@@ -28,6 +28,8 @@ export const company = {
         postalCode: '75015',
         city: 'Paris',
         country: 'France',
+        /** ISO 3166-1 alpha-2, for structured data. */
+        countryCode: 'FR',
     },
     email: 'arnova.gsainthillier@gmail.com',
     publicationDirector: 'Guillaume Sainthillier',
@@ -37,6 +39,34 @@ export const company = {
         address: '440 N Barranca Avenue #4133, Covina, CA 91723',
         country: 'United States',
         url: 'https://vercel.com',
+        privacyUrl: 'https://vercel.com/legal/privacy-policy',
+    },
+    /**
+     * DNS only: the records are not proxied, so Cloudflare never sees page traffic
+     * (check with `dig +short arnova.fr` — the answers are Vercel addresses).
+     */
+    dnsProvider: {
+        name: 'Cloudflare, Inc.',
+        url: 'https://www.cloudflare.com',
+    },
+    /**
+     * Receives contact-form submissions straight from the browser and forwards them
+     * by email. Operated by Web3Creative (India) on AWS infrastructure; its privacy
+     * policy states that submissions are kept for at most three years and that the
+     * sender's IP and email may be checked by anti-spam services.
+     */
+    formProcessor: {
+        name: 'Web3Forms',
+        operator: 'Web3Creative',
+        country: 'India',
+        url: 'https://web3forms.com',
+        privacyUrl: 'https://web3forms.com/privacy',
+    },
+    /** Hosts the inbox behind `email` (a Gmail address). */
+    mailProvider: {
+        name: 'Google',
+        service: 'Gmail',
+        privacyUrl: 'https://policies.google.com/privacy',
     },
     siteUrl: 'https://arnova.fr',
 } as const
