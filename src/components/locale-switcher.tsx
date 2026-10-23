@@ -27,7 +27,8 @@ export function LocaleSwitcher({ label }: { label: string }) {
                         hrefLang={locale}
                         aria-current={isActive ? 'true' : undefined}
                         className={clsx(
-                            'rounded-full px-2.5 py-1 text-xs font-semibold uppercase transition-colors',
+                            // py-1.5: 28px tall, clear of the 24px minimum tap target on touch screens.
+                            'rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase transition-colors',
                             isActive ? 'bg-accent text-accent-foreground' : 'text-muted hover:text-foreground'
                         )}
                     >
