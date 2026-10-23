@@ -37,7 +37,8 @@ export const company = {
     host: {
         name: 'Vercel Inc.',
         address: '440 N Barranca Avenue #4133, Covina, CA 91723',
-        country: 'United States',
+        /** ISO 3166-1 alpha-2; pages print it with `regionName()` in the reader's language. */
+        countryCode: 'US',
         url: 'https://vercel.com',
         privacyUrl: 'https://vercel.com/legal/privacy-policy',
     },
@@ -58,7 +59,7 @@ export const company = {
     formProcessor: {
         name: 'Web3Forms',
         operator: 'Web3Creative',
-        country: 'India',
+        countryCode: 'IN',
         url: 'https://web3forms.com',
         privacyUrl: 'https://web3forms.com/privacy',
     },

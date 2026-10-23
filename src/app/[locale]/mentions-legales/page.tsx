@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import { LegalLayout, legalLinkClass } from '@/components/legal/legal-layout'
 import { company, formattedAddress } from '@/config/company'
 import type { Locale } from '@/i18n/routing'
 import { buildAlternates } from '@/lib/metadata'
+import { regionName } from '@/lib/region'
 
 type PageProps = { params: Promise<{ locale: Locale }> }
 
@@ -31,6 +32,7 @@ export default async function LegalPage({ params }: PageProps) {
 
 function LegalNotice() {
     const t = useTranslations('Legal')
+    const locale = useLocale()
     const external = (url: string) => (chunks: ReactNode) => (
         <a href={url} className={legalLinkClass} rel="noopener">
             {chunks}
@@ -53,7 +55,7 @@ function LegalNotice() {
                                 {t.rich('hosting.host', {
                                     name: company.host.name,
                                     address: company.host.address,
-                                    country: company.host.country,
+                                    country: regionName(company.host.countryCode, locale),
                                     url: company.host.url,
                                     link: external(company.host.url),
                                 })}
