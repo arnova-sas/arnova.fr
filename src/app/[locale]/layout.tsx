@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
@@ -8,6 +8,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { company } from '@/config/company'
 import { routing } from '@/i18n/routing'
+import { baseOpenGraph, socialImage, themeColor } from '@/lib/metadata'
 import '../globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -23,6 +24,8 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }))
 }
 
+export const viewport: Viewport = { themeColor }
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params
     if (!hasLocale(routing.locales, locale)) {
@@ -36,14 +39,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: { default: t('home.title'), template: t('titleTemplate') },
         description: t('home.description'),
         applicationName: t('siteName'),
-        openGraph: {
-            siteName: t('siteName'),
-            type: 'website',
-            locale,
-        },
-        // `opengraph-image.png` / `twitter-image.png` in `src/app/` are picked up by
-        // the file convention; this only declares how X should frame them.
-        twitter: { card: 'summary_large_image' },
+        openGraph: baseOpenGraph(locale, t('siteName')),
+        twitter: { card: 'summary_large_image', images: [{ ...socialImage, alt: t('siteName') }] },
         robots: { index: true, follow: true },
     }
 }

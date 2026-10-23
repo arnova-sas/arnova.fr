@@ -69,3 +69,6 @@ regenerate the derived assets listed in `README.md` _and_ re-derive `--accent`.
 Every foreground/background pair must stay at WCAG AA (4.5:1) — `pnpm check:contrast`
 reads the tokens out of `globals.css` and fails CI otherwise. The dark-mode logo variant
 exists for the same reason; keep both tints in step.
+
+`themeColor` in `src/lib/metadata.ts` (the `theme-color` meta and the web manifest) repeats
+`--background` for both schemes: update it with that token.

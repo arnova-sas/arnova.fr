@@ -6,21 +6,26 @@ import { Container } from '@/components/container'
 import { company } from '@/config/company'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
-import { buildAlternates } from '@/lib/metadata'
+import { baseOpenGraph, buildAlternates } from '@/lib/metadata'
 import { organizationJsonLd, serializeJsonLd } from '@/lib/structured-data'
 
 type PageProps = { params: Promise<{ locale: Locale }> }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { locale } = await params
-    const t = await getTranslations({ locale, namespace: 'Metadata.home' })
+    const t = await getTranslations({ locale, namespace: 'Metadata' })
 
     return {
         // The home title already carries the brand: `absolute` skips the "%s — ARNOVA" template.
-        title: { absolute: t('title') },
-        description: t('description'),
+        title: { absolute: t('home.title') },
+        description: t('home.description'),
         alternates: buildAlternates('/', locale),
-        openGraph: { title: t('title'), description: t('description'), url: buildAlternates('/', locale).canonical },
+        openGraph: {
+            ...baseOpenGraph(locale, t('siteName')),
+            title: t('home.title'),
+            description: t('home.description'),
+            url: buildAlternates('/', locale).canonical,
+        },
     }
 }
 

@@ -135,15 +135,14 @@ install. No other configuration is needed — the framework is auto-detected.
 The logo is the source of the palette, not the other way round: `--accent` is the
 mark's own teal (`#235964`).
 
-| File                          | Purpose                                                                  |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| `public/logo.png`             | Master artwork as supplied — 512×512, white background                   |
-| `public/logo-mark.png`        | Transparent mark in brand teal, for light backgrounds                    |
-| `public/logo-mark-dark.png`   | Same mark tinted `#7fb9c6`, for dark backgrounds                         |
-| `src/app/icon.png`            | Favicon (white background — a transparent mark vanishes in light chrome) |
-| `src/app/apple-icon.png`      | iOS home-screen icon; iOS applies its own rounding                       |
-| `src/app/opengraph-image.png` | 1200×630 link-preview card                                               |
-| `src/app/twitter-image.png`   | Same card, declared separately for X                                     |
+| File                        | Purpose                                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------------------- |
+| `public/logo.png`           | Master artwork as supplied — 512×512, white background                                   |
+| `public/logo-mark.png`      | Transparent mark in brand teal, for light backgrounds                                    |
+| `public/logo-mark-dark.png` | Same mark tinted `#7fb9c6`, for dark backgrounds                                         |
+| `src/app/icon.png`          | Favicon (white background — a transparent mark vanishes in light chrome)                 |
+| `src/app/apple-icon.png`    | iOS home-screen icon; iOS applies its own rounding                                       |
+| `public/og-image.png`       | 1200×630 link-preview card for Open Graph and X (`socialImage` in `src/lib/metadata.ts`) |
 
 Two tints exist because the brand teal falls to roughly 1.6:1 against the dark-mode
 background. `LogoMark` swaps them with Tailwind's `dark:` variant, which keys off
