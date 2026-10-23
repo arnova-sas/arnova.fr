@@ -1,7 +1,20 @@
+import type { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { buttonStyles } from '@/components/button-styles'
 import { Container } from '@/components/container'
 import { Link } from '@/i18n/navigation'
+
+/**
+ * Next resolves the not-found boundary's own metadata when it renders, so the
+ * 404 gets its own title instead of the home page's default one. The locale
+ * comes from the request, as set by the `[locale]` layout.
+ */
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('Metadata.notFound')
+
+    return { title: t('title') }
+}
 
 export default function NotFoundPage() {
     const t = useTranslations('NotFound')

@@ -21,6 +21,9 @@
         "cookies": {
             "title": "Cookies",
             "description": "Le seul cookie déposé par arnova.fr mémorise la langue d’affichage. Aucune mesure d’audience, aucune publicité, aucun traceur tiers."
+        },
+        "notFound": {
+            "title": "Page introuvable"
         }
     },
     "Nav": {

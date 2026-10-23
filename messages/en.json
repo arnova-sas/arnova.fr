@@ -21,6 +21,9 @@
         "cookies": {
             "title": "Cookies",
             "description": "The only cookie arnova.fr sets remembers your display language. No audience measurement, no advertising, no third-party tracker."
+        },
+        "notFound": {
+            "title": "Page not found"
         }
     },
     "Nav": {
