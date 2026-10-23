@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import { LegalLayout, legalLinkClass } from '@/components/legal/legal-layout'
 import { company, formattedAddress } from '@/config/company'
+import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { buildAlternates } from '@/lib/metadata'
 import { regionName } from '@/lib/region'
@@ -79,6 +80,21 @@ function LegalNotice() {
                     id: 'responsabilite',
                     title: t('liability.title'),
                     content: <p>{t('liability.body', { company: company.name })}</p>,
+                },
+                {
+                    id: 'donnees-personnelles',
+                    title: t('data.title'),
+                    content: (
+                        <p>
+                            {t.rich('data.body', {
+                                privacy: (chunks) => (
+                                    <Link href="/confidentialite" className={legalLinkClass}>
+                                        {chunks}
+                                    </Link>
+                                ),
+                            })}
+                        </p>
+                    ),
                 },
             ]}
         />

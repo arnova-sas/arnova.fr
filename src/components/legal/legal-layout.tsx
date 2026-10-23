@@ -207,3 +207,17 @@ function BuildingIcon() {
         </svg>
     )
 }
+
+/** Label/value sheet, e.g. one processing's data, purpose, legal basis, recipients and retention. */
+export function LegalFacts({ rows }: { rows: { label: string; value: ReactNode }[] }) {
+    return (
+        <dl className="divide-y divide-border overflow-hidden rounded-xl border border-border bg-background">
+            {rows.map((row) => (
+                <div key={row.label} className="grid gap-1 p-4 sm:grid-cols-[170px_minmax(0,1fr)] sm:gap-6">
+                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted">{row.label}</dt>
+                    <dd className="text-sm leading-relaxed text-foreground">{row.value}</dd>
+                </div>
+            ))}
+        </dl>
+    )
+}
