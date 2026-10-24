@@ -7,13 +7,13 @@ import { Link } from '@/i18n/navigation'
 
 /**
  * Next resolves the not-found boundary's own metadata when it renders, so the
- * 404 gets its own title instead of the home page's default one. The locale
+ * 404 gets its own title and description instead of the home page's. The locale
  * comes from the request, as set by the `[locale]` layout.
  */
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('Metadata.notFound')
 
-    return { title: t('title') }
+    return { title: t('title'), description: t('description') }
 }
 
 export default function NotFoundPage() {

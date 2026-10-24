@@ -11,6 +11,15 @@ bilingual FR/EN via next-intl, deployed on Vercel.
 Read `README.md` first — it documents the structure, the i18n rules and the deployment
 setup. The points below are the ones that are easy to get wrong.
 
+## Twin site
+
+**leutheria.co** (`/Users/guillaume/Sites/leutheria/leutheria.co`, GitHub `leutheria`) is built from the same template: same components, layout, header,
+footer, contact form, token names in `globals.css` and checks in `scripts/`. Mirror every layout or
+component change there, so the two sites keep presenting the template the same way (language switch
+`FR | EN`, same form labels, same class names). Only brand content differs: names, colours, copy,
+logo, links (Leutheria's Facebook link, Umami analytics) and the URL structure, which each site
+inherited and must keep.
+
 ## Conventions
 
 - **Package manager is pnpm.** Never npm or yarn. Its version is pinned by `packageManager` in
@@ -60,3 +69,6 @@ regenerate the derived assets listed in `README.md` _and_ re-derive `--accent`.
 Every foreground/background pair must stay at WCAG AA (4.5:1) — `pnpm check:contrast`
 reads the tokens out of `globals.css` and fails CI otherwise. The dark-mode logo variant
 exists for the same reason; keep both tints in step.
+
+`themeColor` in `src/lib/metadata.ts` (the `theme-color` meta and the web manifest) repeats
+`--background` for both schemes: update it with that token.
