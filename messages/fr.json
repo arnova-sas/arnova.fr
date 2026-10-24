@@ -185,12 +185,12 @@
             "body": "Le responsable du traitement est {company}, {legalForm} dont le siège social est situé {address}. Pour toute question relative à vos données, écrivez à <mail>{email}</mail>."
         },
         "contactForm": {
-            "title": "Formulaire de contact",
-            "intro": "Lorsque vous nous écrivez via le formulaire de contact, votre message est envoyé directement depuis votre navigateur au service d’envoi de formulaires, qui nous le transmet par e-mail.",
+            "title": "Formulaire de contact et e-mails",
+            "intro": "Lorsque vous nous écrivez via le formulaire de contact, votre message est envoyé directement depuis votre navigateur au service d’envoi de formulaires, qui nous le transmet par e-mail. Si vous écrivez directement à {email}, votre e-mail est reçu par le prestataire de messagerie de notre domaine, qui le redirige vers la même boîte de réception.",
             "data": "Votre nom, votre adresse e-mail et le contenu de votre message, ainsi que l’adresse IP de votre navigateur, que le service d’envoi de formulaires reçoit au moment de l’envoi.",
             "purpose": "Répondre à votre demande et assurer le suivi de nos échanges.",
             "legalBasis": "L’intérêt légitime d’ARNOVA à répondre aux personnes qui la contactent (article 6.1.f du RGPD) et, lorsque votre demande porte sur un projet ou un partenariat, l’exécution de mesures précontractuelles prises à votre demande (article 6.1.b).",
-            "recipients": "<strong>{form}</strong>, service édité par {operator} ({country}), qui reçoit le formulaire et le transmet par e-mail ; pour filtrer les envois abusifs, il peut soumettre votre adresse IP et votre adresse e-mail à des services anti-spam. <strong>{mailProvider}</strong> ({mailService}), qui héberge la boîte de réception d’ARNOVA.",
+            "recipients": "<strong>{form}</strong>, service édité par {operator} ({country}), qui reçoit le formulaire et le transmet par e-mail ; pour filtrer les envois abusifs, il peut soumettre votre adresse IP et votre adresse e-mail à des services anti-spam. <strong>{relay}</strong> ({relayOperator}, {relayCountry}), qui reçoit les e-mails adressés à {email} et les redirige vers la boîte de réception d’ARNOVA sans en conserver de copie. <strong>{mailProvider}</strong> ({mailService}), qui héberge cette boîte de réception.",
             "retention": "Trois ans à compter de notre dernier échange, puis suppression. De son côté, {form} indique dans sa <link>politique de confidentialité</link> conserver les envois trois ans au maximum."
         },
         "hostingLogs": {
@@ -204,8 +204,9 @@
         },
         "transfers": {
             "title": "Transferts hors de l’Union européenne",
-            "us": "{host} et {mailProvider} sont des sociétés établies aux États-Unis. Les transferts de données vers ces prestataires sont encadrés par le Data Privacy Framework UE–États-Unis, auquel tous deux adhèrent, ainsi que par les clauses contractuelles types adoptées par la Commission européenne.",
-            "form": "{form} est exploité par {operator}, société établie hors de l’Union européenne ({country}), sur une infrastructure hébergée notamment aux États-Unis. Ses transferts reposent sur les clauses contractuelles types de la Commission européenne, prévues par son accord de traitement des données."
+            "host": "{host} est une société établie aux États-Unis. Les transferts de données vers cet hébergeur sont encadrés par le Data Privacy Framework UE–États-Unis, auquel il adhère, ainsi que par les clauses contractuelles types adoptées par la Commission européenne.",
+            "form": "{form} est exploité par {operator}, société établie hors de l’Union européenne ({country}), sur une infrastructure hébergée notamment aux États-Unis. Ses transferts reposent sur les clauses contractuelles types de la Commission européenne, prévues par son accord de traitement des données.",
+            "mail": "Les e-mails adressés à {email} sont reçus par {relay} sur des serveurs situés dans l’Union européenne ({relayCountry}). La boîte de réception d’ARNOVA est en revanche un compte {mailService} grand public : elle est fournie dans l’Espace économique européen par {mailOperator} ({mailCountry}), aux conditions d’utilisation de {mailProvider} et selon ses <link>règles de confidentialité</link>, et non dans le cadre d’un accord de traitement des données. {mailProvider} peut conserver les messages dans des centres de données situés hors de l’Union européenne, notamment aux États-Unis, et indique encadrer ces transferts par le Data Privacy Framework UE–États-Unis et par les clauses contractuelles types de la Commission européenne."
         },
         "noSale": {
             "title": "{company} ne vend pas vos données",

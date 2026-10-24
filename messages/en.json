@@ -185,12 +185,12 @@
             "body": "The data controller is {company}, a French {legalForm} whose registered office is at {address}. For any question about your data, write to <mail>{email}</mail>."
         },
         "contactForm": {
-            "title": "Contact form",
-            "intro": "When you write to us through the contact form, your message is sent straight from your browser to the form-delivery service, which forwards it to us by email.",
+            "title": "Contact form and email",
+            "intro": "When you write to us through the contact form, your message is sent straight from your browser to the form-delivery service, which forwards it to us by email. If you write to {email} instead, your email is received by our domain’s mail provider, which redirects it to the same inbox.",
             "data": "Your name, your email address and the content of your message, plus your browser’s IP address, which the form-delivery service receives when you submit.",
             "purpose": "Answering your request and following up on our exchanges.",
             "legalBasis": "ARNOVA’s legitimate interest in answering people who contact it (GDPR Article 6(1)(f)) and, when your request concerns a project or a partnership, steps taken at your request prior to entering into a contract (Article 6(1)(b)).",
-            "recipients": "<strong>{form}</strong>, a service run by {operator} ({country}), which receives the form and forwards it by email; to filter abuse, it may submit your IP address and email address to anti-spam services. <strong>{mailProvider}</strong> ({mailService}), which hosts ARNOVA’s inbox.",
+            "recipients": "<strong>{form}</strong>, a service run by {operator} ({country}), which receives the form and forwards it by email; to filter abuse, it may submit your IP address and email address to anti-spam services. <strong>{relay}</strong> ({relayOperator}, {relayCountry}), which receives the emails sent to {email} and redirects them to ARNOVA’s inbox without keeping a copy. <strong>{mailProvider}</strong> ({mailService}), which hosts that inbox.",
             "retention": "Three years from our last exchange, then deleted. For its part, {form} states in its <link>privacy policy</link> that it keeps submissions for at most three years."
         },
         "hostingLogs": {
@@ -204,8 +204,9 @@
         },
         "transfers": {
             "title": "Transfers outside the European Union",
-            "us": "{host} and {mailProvider} are companies established in the United States. Transfers of data to these providers are covered by the EU–U.S. Data Privacy Framework, to which both are certified, and by the standard contractual clauses adopted by the European Commission.",
-            "form": "{form} is run by {operator}, a company established outside the European Union ({country}), on infrastructure hosted in the United States among other places. Its transfers rely on the European Commission’s standard contractual clauses, set out in its data processing agreement."
+            "host": "{host} is a company established in the United States. Transfers of data to this hosting provider are covered by the EU–U.S. Data Privacy Framework, to which it is certified, and by the standard contractual clauses adopted by the European Commission.",
+            "form": "{form} is run by {operator}, a company established outside the European Union ({country}), on infrastructure hosted in the United States among other places. Its transfers rely on the European Commission’s standard contractual clauses, set out in its data processing agreement.",
+            "mail": "Emails sent to {email} are received by {relay} on servers located in the European Union ({relayCountry}). ARNOVA’s inbox, however, is a consumer {mailService} account: it is provided in the European Economic Area by {mailOperator} ({mailCountry}) under {mailProvider}’s terms of service and <link>privacy policy</link>, not under a data processing agreement. {mailProvider} may store messages in data centres outside the European Union, including in the United States, and states that it covers these transfers with the EU–U.S. Data Privacy Framework and the European Commission’s standard contractual clauses."
         },
         "noSale": {
             "title": "{company} does not sell your data",

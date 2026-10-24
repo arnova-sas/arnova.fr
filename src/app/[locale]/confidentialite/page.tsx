@@ -86,7 +86,7 @@ function PrivacyPolicy() {
                     title: t('contactForm.title'),
                     content: (
                         <>
-                            <p>{t('contactForm.intro')}</p>
+                            <p>{t('contactForm.intro', { email: company.email })}</p>
                             <LegalFacts
                                 rows={[
                                     { label: t('labels.data'), value: t('contactForm.data') },
@@ -98,6 +98,10 @@ function PrivacyPolicy() {
                                             form: company.formProcessor.name,
                                             operator: company.formProcessor.operator,
                                             country: regionName(company.formProcessor.countryCode, locale),
+                                            relay: company.mailRelay.name,
+                                            relayOperator: company.mailRelay.operator,
+                                            relayCountry: regionName(company.mailRelay.countryCode, locale),
+                                            email: company.email,
                                             mailProvider: company.mailProvider.name,
                                             mailService: company.mailProvider.service,
                                             strong,
@@ -147,17 +151,24 @@ function PrivacyPolicy() {
                     title: t('transfers.title'),
                     content: (
                         <>
-                            <p>
-                                {t('transfers.us', {
-                                    host: company.host.name,
-                                    mailProvider: company.mailProvider.name,
-                                })}
-                            </p>
+                            <p>{t('transfers.host', { host: company.host.name })}</p>
                             <p>
                                 {t('transfers.form', {
                                     form: company.formProcessor.name,
                                     operator: company.formProcessor.operator,
                                     country: regionName(company.formProcessor.countryCode, locale),
+                                })}
+                            </p>
+                            <p>
+                                {t.rich('transfers.mail', {
+                                    email: company.email,
+                                    relay: company.mailRelay.name,
+                                    relayCountry: regionName(company.mailRelay.countryCode, locale),
+                                    mailProvider: company.mailProvider.name,
+                                    mailService: company.mailProvider.service,
+                                    mailOperator: company.mailProvider.operator,
+                                    mailCountry: regionName(company.mailProvider.countryCode, locale),
+                                    link: external(company.mailProvider.privacyUrl),
                                 })}
                             </p>
                         </>
