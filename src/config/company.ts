@@ -31,7 +31,10 @@ export const company = {
         /** ISO 3166-1 alpha-2, for structured data. */
         countryCode: 'FR',
     },
-    /** Public address shown on the site. The contact form is delivered elsewhere (Web3Forms -> the Gmail inbox). */
+    /**
+     * Public address shown on the site. Mail sent to it goes through `mailRelay` to the Gmail
+     * inbox; the contact form reaches the same inbox through Web3Forms.
+     */
     email: 'contact@arnova.fr',
     publicationDirector: 'Guillaume Sainthillier',
     /** Required in French "mentions légales": identity of the hosting provider. */
@@ -64,10 +67,27 @@ export const company = {
         url: 'https://web3forms.com',
         privacyUrl: 'https://web3forms.com/privacy',
     },
-    /** Hosts the Gmail inbox Web3Forms delivers contact-form submissions to. */
+    /**
+     * Receives the mail sent to `email` (the MX records point to mx1-3.mail.ovh.net, OVH SAS
+     * servers in France) and redirects it to the Gmail inbox without keeping a copy. The
+     * domain has no OVH mailbox and sends no mail (SPF `-all`).
+     */
+    mailRelay: {
+        name: 'OVHcloud',
+        operator: 'OVH SAS',
+        countryCode: 'FR',
+        url: 'https://www.ovhcloud.com',
+    },
+    /**
+     * Hosts the Gmail inbox both the contact form and `mailRelay` deliver to. It is a consumer
+     * Gmail account, not Google Workspace: no data processing agreement, and EEA users'
+     * contract is with Google Ireland Limited.
+     */
     mailProvider: {
         name: 'Google',
         service: 'Gmail',
+        operator: 'Google Ireland Limited',
+        countryCode: 'IE',
         privacyUrl: 'https://policies.google.com/privacy',
     },
     siteUrl: 'https://arnova.fr',

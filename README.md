@@ -87,9 +87,15 @@ both the footer and the legal notice read from it. The values come from the Fren
 public company registry (INSEE / RNE) for SIREN **942070392**. The intra-community VAT
 number is derived from the SIREN: `key = (12 + 3 × (SIREN mod 97)) mod 97`.
 
-The third-party services the site relies on (host, DNS, form delivery, mailbox) are
-listed there too, so the legal pages name them from one place. Countries are stored as
-ISO codes and printed in the reader's language.
+The third-party services the site relies on (host, DNS, form delivery, mail redirect,
+mailbox) are listed there too, so the legal pages name them from one place. Countries are
+stored as ISO codes and printed in the reader's language.
+
+`contact@arnova.fr` has no mailbox: OVHcloud receives it (MX `mx1-3.mail.ovh.net`) and
+redirects it, without a local copy, to the same consumer Gmail inbox the form delivers to.
+The domain sends no mail (SPF `v=spf1 -all`). If that changes — an OVH mailbox, Google
+Workspace, or replying as `contact@` — update `mailRelay` / `mailProvider`, the privacy
+policy's recipients and transfers, and the SPF record together.
 
 When a legal page's wording changes, bump its `updatedOn` in `src/lib/legal-pages.ts`.
 When the home or contact copy changes, bump its `lastModified` in `src/app/sitemap.ts`.
