@@ -1,0 +1,312 @@
+<!doctype html>
+<!--
+    Social preview of arnova.fr, in the layout of sainthillier.fr's: drawn at 1200×630 for og:image (public/og-image.png)
+    and, with #github, at 1280×640 inside GitHub's 80px safe border (.github/social-preview.png, uploaded by hand in the
+    repository's Settings → Social preview). Regenerate both with `pnpm og-image` after a design or copy change.
+-->
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <!-- The site's fonts, from Google Fonts: only this page loads them, on the machine that draws the images -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=block" />
+        <style>
+            :root {
+                --primary: #235964;
+                --pill: #235964;
+                --on-pill: #fff;
+                --surface: #f8fafb;
+                --surface-card: #ffffff;
+                --surface-low: #eaf3f5;
+                --surface-high: #dbe9ec;
+                --ink: #0d1a1e;
+                --muted: #55686e;
+                --dot: #3fa7b8;
+                --hairline: rgb(0 0 0 / 0.08);
+                --font-sans: 'Inter', sans-serif;
+                --font-heading: 'Space Grotesk', sans-serif;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            html,
+            body {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            body {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                padding: 64px 72px 56px;
+                background: var(--surface);
+                color: var(--ink);
+                font-family: var(--font-sans);
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* GitHub crops its previews to other ratios: what matters stays 80px away from every edge */
+            body.github {
+                padding: 80px;
+            }
+
+            svg {
+                width: 1em;
+                height: 1em;
+                flex-shrink: 0;
+            }
+
+            .blob {
+                position: absolute;
+                border-radius: 9999px;
+                filter: blur(64px);
+            }
+
+            .blob-primary {
+                top: -160px;
+                right: -80px;
+                width: 620px;
+                height: 620px;
+                background: rgb(35 89 100 / 0.09);
+            }
+
+            .blob-accent {
+                bottom: -200px;
+                left: -120px;
+                width: 460px;
+                height: 460px;
+                background: rgb(63 167 184 / 0.18);
+            }
+
+            .badges {
+                position: relative;
+                display: flex;
+                gap: 10px;
+                margin-bottom: 28px;
+            }
+
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                border-radius: 9999px;
+                background: var(--surface-low);
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                white-space: nowrap;
+            }
+
+            .badge-status {
+                background: var(--surface-high);
+                text-transform: uppercase;
+            }
+
+            .badge-topic {
+                color: var(--primary);
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 9999px;
+                background: var(--dot);
+            }
+
+            .content {
+                position: relative;
+                display: flex;
+                flex: 1;
+                gap: 48px;
+            }
+
+            .intro {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            h1 {
+                font-family: var(--font-heading);
+                font-size: 62px;
+                font-weight: 700;
+                line-height: 1.06;
+                letter-spacing: -0.03em;
+            }
+
+            .highlight {
+                color: var(--primary);
+            }
+
+            .lead {
+                margin-top: 24px;
+                font-size: 26px;
+                line-height: 1.4;
+                color: var(--muted);
+            }
+
+            .lead strong {
+                color: var(--ink);
+                font-weight: 600;
+            }
+
+            .site {
+                display: inline-flex;
+                align-self: flex-start;
+                align-items: center;
+                gap: 10px;
+                margin-top: 36px;
+                padding: 12px 22px;
+                border-radius: 12px;
+                background: var(--pill);
+                color: var(--on-pill);
+                font-family: var(--font-heading);
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .card-wrap {
+                position: relative;
+                flex-shrink: 0;
+                align-self: center;
+                width: 340px;
+            }
+
+            .card-glow {
+                position: absolute;
+                inset: -10px;
+                border-radius: 28px;
+                background: linear-gradient(to top right, rgb(35 89 100 / 0.09), rgb(63 167 184 / 0.18), transparent);
+                filter: blur(16px);
+            }
+
+            .card {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid var(--hairline);
+                border-radius: 20px;
+                background: var(--surface-card);
+                box-shadow:
+                    0 20px 25px -5px rgb(11 28 48 / 0.1),
+                    0 8px 10px -6px rgb(11 28 48 / 0.1);
+            }
+
+            .profile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                padding: 32px 24px 26px;
+                text-align: center;
+                background: var(--surface-low);
+                border-bottom: 1px solid var(--hairline);
+            }
+
+            .profile img {
+                width: 132px;
+                height: 132px;
+                object-fit: contain;
+            }
+
+            .name {
+                font-family: var(--font-heading);
+                font-size: 28px;
+                font-weight: 700;
+                letter-spacing: -0.01em;
+            }
+
+            .role {
+                margin-top: -8px;
+                font-size: 18px;
+                color: var(--muted);
+            }
+
+            .stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 20px 8px;
+                text-align: center;
+            }
+
+            .stats div {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .stats div + div {
+                border-left: 1px solid var(--hairline);
+            }
+
+            .stats dd {
+                font-family: var(--font-heading);
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 1.2;
+                white-space: nowrap;
+                color: var(--primary);
+            }
+
+            .stats dd.neutral {
+                color: var(--ink);
+            }
+
+            /* A word, not a figure: smaller, or it overflows its third of the card */
+            .stats dd.word {
+                font-size: 20px;
+                line-height: 36px;
+            }
+
+            .stats dt {
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: #8a8f98;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            if (location.hash === '#github') {
+                document.body.classList.add('github')
+            }
+        </script>
+        <div class="blob blob-primary"></div>
+        <div class="blob blob-accent"></div>
+
+        <div class="badges">
+            <span class="badge badge-status"><span class="dot"></span>Marketing digital · Éditeur de sites</span>
+            <span class="badge badge-topic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="m19 9-5 5-4-4-3 3" /></svg>Référencement & monétisation</span>
+        </div>
+        <div class="content">
+            <div class="intro">
+                <h1>Nous construisons des audiences <span class="highlight">qui durent</span></h1>
+                <p class="lead">ARNOVA conçoit, développe et exploite <strong>ses propres sites web</strong>, pour transformer une audience en <strong>actif durable</strong>.</p>
+                <span class="site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>arnova.fr</span>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card-glow"></div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="../public/logo-mark.png" alt="" />
+                        <p class="name">ARNOVA</p>
+                        <p class="role">Éditeur de sites web</p>
+                    </div>
+                    <!-- Evergreen figures: a count would go stale -->
+                    <dl class="stats">
+                        <div><dt>Sites</dt><dd class="neutral word">Propres</dd></div>
+                        <div><dt>Croissance</dt><dd class="">SEO</dd></div>
+                        <div><dt>Horizon</dt><dd class="neutral word">Long terme</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
