@@ -47,6 +47,9 @@ export function SiteFooter() {
                         <a href={`mailto:${company.email}`} className={linkClass}>
                             {company.email}
                         </a>
+                        <a href={company.linkedinUrl} target="_blank" rel="noreferrer noopener" className={linkClass}>
+                            {t('linkedinLabel')}
+                        </a>
                     </nav>
                 </div>
 

@@ -26,6 +26,7 @@ export function organizationJsonLd() {
             addressLocality: company.address.city,
             addressCountry: company.address.countryCode,
         },
+        sameAs: [company.linkedinUrl],
     }
 }
 
