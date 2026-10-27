@@ -285,6 +285,7 @@
     "Footer": {
         "tagline": "A web publishing and digital marketing company. We build, grow and operate our own audiences.",
         "navLabel": "Footer navigation",
+        "linkedinLabel": "LinkedIn",
         "rights": "All rights reserved."
     }
 }

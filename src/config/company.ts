@@ -36,6 +36,7 @@ export const company = {
      * inbox; the contact form reaches the same inbox through Web3Forms.
      */
     email: 'contact@arnova.fr',
+    linkedinUrl: 'https://www.linkedin.com/company/arnova-sas/',
     publicationDirector: 'Guillaume Sainthillier',
     /** Required in French "mentions légales": identity of the hosting provider. */
     host: {
