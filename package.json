@@ -9,6 +9,7 @@
         "lint": "biome check src",
         "lint:fix": "biome check --write src",
         "typecheck": "tsc --noEmit",
+        "og-image": "node scripts/og-image.mjs",
         "prettier": "prettier --write \"**/*.{css,md,yaml,yml}\"",
         "prettier:check": "prettier --check \"**/*.{css,md,yaml,yml}\"",
         "check:messages": "node scripts/check-messages.mjs",
