@@ -41,5 +41,5 @@
         "*.{js,jsx,ts,tsx,mjs,cjs,json}": "biome check --write --no-errors-on-unmatched",
         "*.{css,md,yaml,yml}": "prettier --write"
     },
-    "packageManager": "pnpm@12.16.0"
+    "packageManager": "pnpm@12.16.1"
 }
